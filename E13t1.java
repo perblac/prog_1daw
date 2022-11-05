@@ -1,5 +1,4 @@
-
-/**
+/**Enunciado:  Haz un programa que pregunte al usuario tres números enteros y guárdalos en variables llamadas horas, minutos y segundos. El programa mostrará el número total de segundos que hay juntando las cantidades de tiempo expresadas en las tres variables.
  *
  * @author rperblac
  */
