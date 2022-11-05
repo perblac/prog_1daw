@@ -1,4 +1,4 @@
-/**Enunciado: Crea un programa que pregunte al usuario un n?mero entero llamado gradosCent?grados. El programa deber? convertir dicha cantidad a grados Farenheit y mostrarla por pantalla. La f?rmula para realizar la conversi?n es:
+/**Enunciado: Crea un programa que pregunte al usuario un número entero llamado gradosCentígrados. El programa deberá convertir dicha cantidad a grados Farenheit y mostrarla por pantalla. La fórmula para realizar la conversión es:
 	F= 9/5*C+32
  *
  * @author rperblac
