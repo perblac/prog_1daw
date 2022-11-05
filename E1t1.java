@@ -1,6 +1,6 @@
 /** Enunciado: Ejercicio 1: Haz un programa Java llamado Datos_Juan, Datos_Ana… según tu nombre, que muestre por pantalla tu ficha personal: dni, nombre, apellidos, fecha de nacimiento, edad, dirección, localidad, teléfono y email mostrando cada dato en una línea diferente. Compila y ejecútalo para comprobar que funciona.
  *
- * @author rperc
+ * @author rperblac
  */
 import java.lang.*;
 public class E1t1 {
