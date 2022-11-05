@@ -1,4 +1,6 @@
-/*  Este programa imprime unos datos por pantalla
+/*  Enunciado:  En el ejercicio 1 coloca un comentario de bloque al principio explicando lo que hace el programa, el nombre del autor, el número de versión del programa y la fecha en que se programó. Añade comentarios de línea que consideres apropiados para explicar lo que va haciendo el programa.
+
+    Este programa imprime unos datos por pantalla
     Autor: Rubén Perblac
     Version 1.0
     Fecha 25-sept-2022
