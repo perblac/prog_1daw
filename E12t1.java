@@ -1,4 +1,8 @@
-/**
+/**Enunciado: Haz un programa que pida al usuario por teclado tres números con decimales: precioNormal, porcentajeRebaja y precioRebajado. El programa mostrará por pantalla el precio normal y el rebajado, tras haber aplicado el porcentaje de descuento indicado en la variable porcentajeRebaja. La salida del programa deberá tener el siguiente formato:
+    Precio normal del artículo: …… euros
+    Porcentaje de rebaja aplicado: ….. %
+    Descuento aplicado: …… euros
+    Precio final del artículo: ……. euros
  *
  * @author rperblac
  */
