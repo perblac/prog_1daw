@@ -1,4 +1,8 @@
-/**
+/**Enunciado:: Realiza un programa que pregunte al usuario por teclado un número de “euros” y el programa mostrará por pantalla el cambio de dicha cantidad a las siguientes monedas:
+    Dolares 1 € = 1.42 $
+    Libras 100 € = 87.13£
+    Yens 1 € = 113.86 ¥
+    Pesetas 1 € = 166.386 pts
  *
  * @author rperblac
  */
