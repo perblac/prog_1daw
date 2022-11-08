@@ -14,17 +14,21 @@ public class DisparaMario {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         double h= screenSize.getHeight();
         double w= screenSize.getWidth();
-        Mario m = new Mario(100,0);
-        Cañon c = new Cañon((int)w-40,(int)h/2);
-        Disparo p = new Disparo((int)w-40,(int)h/2,-100,(int) h/2);
         boolean haciaAbajo= true;
-        int muertes = 0;
+        int muertes = 0, marioX, cañonX,contacto;
+        marioX = (int)(200*(Math.random()));
+        cañonX =(int) ((w-(w/2))*(Math.random()))+300;
+        Cañon c = new Cañon(cañonX,(int)h/2);
+        Disparo p = new Disparo(cañonX,(int)h/2,-100,(int) h/2);
+        Mario m = new Mario(marioX,0);
+        contacto = 20;
+        System.out.print("Muertes: ");
         do
         {
             if (haciaAbajo){
                 if (m.getY()<40)
                 {
-                    m.correrHacia(100, (int)h);
+                    m.correrHacia(marioX, (int)h);
                 }
                 if (m.getY()>(int)(h-40)){
                 
@@ -34,25 +38,30 @@ public class DisparaMario {
             {
                 if (m.getY()>(int)(h-40))
                 {
-                    m.correrHacia(100, 0);
+                    m.correrHacia(marioX, 0);
                 }
                 
                 if (m.getY()<40){
                     haciaAbajo=true;
                 }
             }
-            if (((p.getX()-m.getX())<100)&&((p.getY()-m.getY())<100))
+            if ((Math.abs((p.getX()-m.getX()))<contacto)&&((Math.abs(p.getY()-m.getY()))<contacto))
             {
-                System.out.println(p.getX()+" "+m.getX()+" "+((p.getX()-m.getX())<100)+" "+p.getY()+" "+m.getY()+" "+((p.getY()-m.getY())<100));
-                m.eliminar();
+                System.out.println(p.getX()+" "+m.getX()+" "+((p.getX()-m.getX())<contacto)+" "+p.getY()+" "+m.getY()+" "+((p.getY()-m.getY())<contacto));
                 ++muertes;
                 System.out.print(muertes+" ");
-                m = new Mario(100,0);                
+                marioX = (int)(200*(Math.random()));
+                m.eliminar();
+                m = new Mario(marioX,0);
+                c.eliminar();
+                cañonX=cañonX-10;
+                p.eliminar();
+                p = new Disparo(cañonX,(int)h/2,-100,(int) h/2);
             }
             if (p.getX()<10)
             {
                 p.eliminar();
-                p = new Disparo((int)w-40,(int)h/2,-100,(int) h/2);
+                p = new Disparo(cañonX,(int)h/2,-100,(int) h/2);
             }
         } while (muertes<10);
         System.exit(0);
