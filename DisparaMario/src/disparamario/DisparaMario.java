@@ -50,6 +50,7 @@ public class DisparaMario {
             {
                 ++muertes;
                 System.out.print(muertes+" ");
+                //Linea de debug:
                 System.out.println("pX"+p.getX()+" mX"+m.getX()+" (<"+contacto+":"+((p.getX()-m.getX())<contacto)+") pY"+p.getY()+" mY"+m.getY()+" (<"+contacto+":"+((p.getY()-m.getY())<contacto)+")");
                 marioX = (int)(200*(Math.random()));
                 m.eliminar();
