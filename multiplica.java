@@ -1,4 +1,4 @@
-/**
+/** ejercicio de clase en el que hay que realizar un programa que multiplique dos números enteros pasados como argumentos
  *
  * @author rperblac
  */
