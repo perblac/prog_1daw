@@ -11,7 +11,7 @@ public class E27t2 {
     
 // Funcion para contar los "." en la entrada de ip    
     public static int contarCaracteres(String cadena, char caracter) {
-        int posicion, contador = 0;
+        int posicion, contador = 0; //  posición guarda el índice del caracter cada vez que se encuentra, contador cuenta las veces
         posicion = cadena.indexOf(caracter);
         while (posicion != -1) { //mientras se encuentre el caracter
             contador++;           //se cuenta
@@ -26,7 +26,7 @@ public class E27t2 {
         int timeout = 0;                                // Variable para el timeout
         int i;                                          // Acumulador
         boolean ipvalida = true;                        // Condición de validez de la ip
-        boolean timeoutvalido;                    // Condición de validez del timeout
+        boolean timeoutvalido;                          // Condición de validez del timeout
         
 //      Entrada de IP
         do
@@ -130,6 +130,7 @@ public class E27t2 {
                 ipvalida = false;
             }
         }
+        
         if (!(ipvalida))
         {
             System.exit(1);
