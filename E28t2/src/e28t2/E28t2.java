@@ -13,7 +13,7 @@ public class E28t2 {
         InetAddress direccion = null;       // variable clase InetAddress para la direccion
         String entrada = null, host = null; // Strings: entrada para la entrada del host, host para la direccion del host
 
-        System.out.println("Introduzca host: ");
+        System.out.println("Introduzca un nombre de equipo: ");
         entrada = new Scanner(System.in).next();
         try
         {
@@ -25,7 +25,7 @@ public class E28t2 {
         }
         if (host!=null)
         {
-            System.out.println("IP: "+host);
+            System.out.println("La IP de " + entrada + " es " + host);
         }
     }    
 }
