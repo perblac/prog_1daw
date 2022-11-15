@@ -20,15 +20,32 @@ public class E27t2 {
         return contador;
 }
     public static void main(String[] args) {
-        byte[] ip = new byte[] {0,0,0,0};               // Array para recibir la ip de destino
-        String[] iptexto = new String[] {"","","",""};  // Array String para la entrada de la ip
+//        byte[] ip = new byte[] {0,0,0,0};               // Array para recibir la ip de destino
+//        String[] iptexto = new String[] {"","","",""};  // Array String para la entrada de la ip
         String direccion;                               // String para la entrada de ip
         int timeout = 0;                                // Variable para el timeout
-        int i;                                          // Acumulador
-        boolean ipvalida = true;                        // Condición de validez de la ip
+//        int i;                                          // Acumulador
+        boolean ipvalida;                        // Condición de validez de la ip
         boolean timeoutvalido;                          // Condición de validez del timeout
         
+        InetAddress ip = null;
+        
 //      Entrada de IP
+        do
+        {
+            System.out.println("Escriba una dirección IP");
+            direccion = new Scanner(System.in).next();
+            ipvalida = true;
+            try
+            {
+                ip = InetAddress.getByName(direccion);
+            } catch (Exception e)
+            {
+                System.out.println(e.getLocalizedMessage());
+                ipvalida = false;
+            }
+        } while (!(ipvalida));
+        /*
         do
         {
             System.out.println("Escriba una dirección IP");
@@ -38,7 +55,8 @@ public class E27t2 {
                 System.out.println("Use el formato a.b.c.d");
             }
         } while (contarCaracteres(direccion,'.')!=3);
-
+        */
+        
 //      Entrada de timeout        
         do
         {
@@ -61,7 +79,7 @@ public class E27t2 {
             
         } while (!(timeoutvalido));
         
-        
+        /*
 //      Sacamos trozos del String direccion al array iptexto[]
             iptexto[0] = direccion.substring(0,direccion.indexOf("."));
             direccion = direccion.substring(direccion.indexOf(".")+1);
@@ -70,9 +88,9 @@ public class E27t2 {
             iptexto[2] = direccion.substring(0,direccion.indexOf("."));
             direccion = direccion.substring(direccion.indexOf(".")+1);
             iptexto[3] = direccion.substring(0);
-            
+        */    
 //      Sacamos bytes del array iptexto[] y los pasamos al array ip[]
-
+        
 /*      for (i=0;i>3;++i)
         {
             try
@@ -85,6 +103,7 @@ public class E27t2 {
             }
         }
 */
+        /*
         try
             {
                 ip[0]=Byte.parseByte(iptexto[0]);
@@ -135,13 +154,18 @@ public class E27t2 {
         {
             System.exit(1);
         }
-       
+        */
+        
+        
         boolean test = false;
         try
         {
+            /*    
                 InetAddress ipInet = InetAddress.getByAddress("",ip);
                 test = ipInet.isReachable(timeout);
-                System.out.println("Haciendo ping a "+ipInet+"..."+test);
+            */    
+                test = ip.isReachable(timeout);
+                System.out.println("Haciendo ping a "+ip+"..."+test);
         } catch (Exception e)
         {
             System.out.println(e.getMessage());
