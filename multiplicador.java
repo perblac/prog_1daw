@@ -41,7 +41,7 @@ public class multiplicador {
                 
                 if (!(errorenvalores))  // Sólo seguimos imprimiendo la multiplicación si no hay error en los valores
                 {
-                    if (i == 0)   // El primer número no lleva signo de multiplicacion delante, los demás sí
+                    if (i == 0)   // El primer número no lleva signo de multiplicación delante, los demás sí
                     {
                         System.out.print(a);
                     } else
