@@ -30,7 +30,8 @@ public class multiplicador {
             {
                 try
                 {
-                    a = Integer.parseInt(args[i+1]);                       
+                //  a = Integer.parseInt(args[i+1]);    // Quitar comentario en esta línea para provocar excepción ArrayIndexOutOfBoundsException                 
+                    a = Integer.parseInt(args[i]);                       
                 } catch (Exception e)
                 {
                     System.out.print("\nError en valores: " + e);
