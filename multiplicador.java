@@ -6,9 +6,9 @@
 public class multiplicador {
 
     public static void main(String args[]) {
-        int a=0,i;
-        long acumulador = 0;
-        boolean errorenvalores = false;
+        int a=0,i;  // a va tomando los valores de los argumentos a través del parseInt(). i es para iterar por los argumentos
+        long acumulador = 0;    // acumulador va tomando el valor de la multiplicación
+        boolean errorenvalores = false;     // flag para detectar que hubo algun error al parsear los argumentos
         
         // Si se ejecuta sin argumentos, escribimos las instrucciones y salimos
         if ((args.length)<1)
@@ -23,10 +23,10 @@ public class multiplicador {
         }
         else
         {
-            i=0;
-            acumulador=1;
+            i=0;    // empezamos con el primer argumento, args[0]
+            acumulador=1; // iniciamos a 1 porque cualquier valor multiplicado por 1 se queda igual
 
-            while (i<args.length)
+            while (i < args.length)
             {
                 try
                 {
@@ -41,7 +41,7 @@ public class multiplicador {
                 
                 if (!(errorenvalores))  // Sólo seguimos imprimiendo la multiplicación si no hay error en los valores
                 {
-                    if (i==0)   // El primer número no lleva signo de multiplicacion delante, los demás sí
+                    if (i == 0)   // El primer número no lleva signo de multiplicacion delante, los demás sí
                     {
                         System.out.print(a);
                     } else
