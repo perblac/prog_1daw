@@ -16,8 +16,21 @@ public class E8t2 {
         b.dibujar();
         for (i=0;i<trasvase;i++)
         {
-            a.retirarLitro();
-            b.añadirLitro();
+            if (a.retirarLitro())
+            {
+                a.retirarLitro();
+            } else
+            {
+                System.out.println("Depósito A vacío");
+            }
+            
+            if (b.añadirLitro())
+            {
+                b.añadirLitro();
+            } else
+            {
+                System.out.println("Depósito B lleno");
+            }      
         }
         a.dibujar();
         b.dibujar();        
