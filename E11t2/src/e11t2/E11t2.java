@@ -16,14 +16,37 @@ public class E11t2 {
         String temp1, temp2, cadena1 = "Mensaje de la primera caja", cadena2 = "Mensaje de la segunda caja";
         Caja c1= new Caja(cadena1);
         Caja c2= new Caja(cadena2);
-        c1.abrirCaja();
-        c2.abrirCaja();        
+        
+        if (!(c1.estaAbierta()))
+        {
+            c1.abrirCaja();
+        }
+        if (!(c2.estaAbierta()))
+        {
+            c2.abrirCaja();        
+        }
+        
         temp1 = c1.getMensaje();
         temp2 = c2.getMensaje();
         imprime(temp1,temp2);
         System.out.println("\n> CAMBIO >\n");
-        c1.cambiarMensaje(temp2);
-        c2.cambiarMensaje(temp1);
+        
+        if (c1.cambiarMensaje(temp2))
+        {
+            c1.cambiarMensaje(temp2);
+        } else
+        {
+            System.out.println("No se puede cambiar el mensaje de la caja 1");
+        }
+        
+        if (c2.cambiarMensaje(temp1))
+        {
+            c2.cambiarMensaje(temp1);
+        } else
+        {
+            System.out.println("No se puede cambiar el mensaje de la caja 2");
+        }
+        
         temp1 = c1.getMensaje();
         temp2 = c2.getMensaje();
         imprime(temp1,temp2);
