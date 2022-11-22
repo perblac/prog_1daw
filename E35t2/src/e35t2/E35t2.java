@@ -24,35 +24,44 @@ public class E35t2 {
         // a.
         try
         {
+            System.out.print("a)a. Comparados con \"==\"");
             if (objetomp3_1==objetomp3_2)
             {
-                System.out.println("son iguales " + objetomp3_1 + " " + objetomp3_2);
+                System.out.println(" son iguales " + objetomp3_1 + " " + objetomp3_2);
             } else
             {
-                System.out.println("son distintos " + objetomp3_1 + " " + objetomp3_2);
+                System.out.println(" son distintos " + objetomp3_1 + " " + objetomp3_2);
             }
         } catch (Exception error)
         {
-            System.out.println("a)a. " + error);
+            System.out.println(" " + error);
         }
         
         // b.
         try
         {
+            System.out.print("a)b. Comparados con \".equals\"");
             if (objetomp3_1.equals(objetomp3_2))
             {
-                System.out.println("son iguales " + objetomp3_1 + " " + objetomp3_2);
+                System.out.println(" son iguales " + objetomp3_1 + " " + objetomp3_2);
             } else
             {
-                System.out.println("son distintos " + objetomp3_1 + " " + objetomp3_2);
+                System.out.println(" son distintos " + objetomp3_1 + " " + objetomp3_2);
             }
         } catch (Exception error)
         {
-            System.out.println("a)b." + error);
+            System.out.println(" " + error);
         }
         
         // c.
-        System.out.println("a)c. " + objetomp3_1.hashCode() + " " + objetomp3_2.hashCode());
+        System.out.print("a)c. " + objetomp3_1.hashCode() + " " + objetomp3_2.hashCode());
+        if ((objetomp3_1.hashCode())==(objetomp3_2.hashCode()))
+        {
+            System.out.println(". Son iguales");
+        } else
+        {
+            System.out.println(". Son distintos");
+        }
         
 // b)
         Reproductor escuchar;
