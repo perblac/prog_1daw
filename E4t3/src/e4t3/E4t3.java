@@ -26,20 +26,12 @@ public class E4t3 {
         } while (novale);
         switch (entrada)
         {
-            case "S":
-            case "s":
-            case "Si":
-            case "si":
-            case "SI":
+            case "S": case "s": case "Si": case "si": case "SI":
                 System.out.println("El usuario es mayor de edad");
                 break;
-            case "N":
-            case "n":
-            case "No":
-            case "no":
-            case "NO":
+            case "N": case "n": case "No": case "no": case "NO":
                 System.out.println("El usuario es menor de edad");
-                break;              
+                break;
         }
     }
     
