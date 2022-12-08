@@ -52,6 +52,7 @@ public class E6t3 {
                         
             capat.println("¿Desea poner otra imagen? (S/N)");            
             leetecla = tecl.leerCaracter();
+            capat.saltoLinea();
             salir = ((leetecla != 'S') && (leetecla != 's')); // Solo salimos si la tecla pulsada es 'S' o 's'
             
         } while (!salir);
