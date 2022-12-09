@@ -14,6 +14,7 @@ public class MenuLibro {
         Libro libro3 = new Libro("9788497594257", "Un Mundo Feliz", "Aldous Huxley", 256);
         Libro libro4 = new Libro();
         Libro coleccion[] = {libro1, libro2, libro3, libro4};
+        int tamaño = coleccion.length;
         int entrada = 0;
         boolean opcioncorrecta = false;
         boolean terminar = false;
@@ -42,7 +43,7 @@ public class MenuLibro {
             switch (entrada)
             {
                 case 0:
-                    for (int i=0;i<4;++i)
+                    for (int i=0;i<tamaño;++i)
                     {
                         coleccion[i].mostrarlibro();
                     }
