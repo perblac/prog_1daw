@@ -56,7 +56,7 @@ private static String leerDni()
         dni = new Scanner(System.in).nextLine();
         if (dni.length()==9) // Debe tener 9 caracteres
         {
-            String numeros = dni.substring(0,7); // Los 8 primeros a "numeros"
+            String numeros = dni.substring(0,8); // Los 8 primeros a "numeros"
             String letra = dni.substring(8,9); // El noveno a "letra"
             if (numeros.chars().allMatch(Character::isDigit)) // "numeros" deben ser dígitos
             {
