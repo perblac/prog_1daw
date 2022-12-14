@@ -293,7 +293,8 @@ public class E41t3 {
                         capat.cls();
                         capat.print(yt, xt, "$");
                         capat.print(altop / 2, (anchop / 2) - (textogana.length() / 2), textogana);
-                        capat.print(altop / 2 + 2, (anchop / 2) - ((puntuacion.length() + Integer.toString(puntos + movimientos + (5 * nivel)).length()) / 2), puntuacion + "" + (puntos + movimientos + (5 * nivel)));
+                        capat.print(altop / 2 + 2, (anchop / 2) - ((puntuacion.length() + Integer.toString(puntos + movimientos + (5 * nivel)).length()) / 2),
+                                    puntuacion + "" + (puntos + movimientos + (5 * nivel)));
 
                         // Hacemos una breve pausa y continuamos si se pulsa cualquier tecla
                         try
