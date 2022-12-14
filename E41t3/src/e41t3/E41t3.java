@@ -113,7 +113,7 @@ public class E41t3 {
         Teclado tecl = cons.getTeclado();
         int anchop = capat.getNumeroColumnas();
         int altop = capat.getNumeroFilas();
-        int puntos = 0, ultimapuntuacion, maxpuntos = 0, nivel, movimientos, calcpista;
+        int puntos = 0, ultimapuntuacion, maxpuntos = 0, nivel, nuevomov, movimientos, calcpista;
         String pista = null;
         int xj = 4, yj = 4, xt = 3, yt = 3;
         Random generador = new Random();
@@ -135,7 +135,8 @@ public class E41t3 {
             ultimapuntuacion = puntos;
             puntos = 0;
             nivel = 1;
-            movimientos = 80;
+            nuevomov = 80;
+            movimientos = nuevomov;
             if (ultimapuntuacion > maxpuntos) maxpuntos = ultimapuntuacion;
             // cheat
             cheat = false;
@@ -194,9 +195,11 @@ public class E41t3 {
                     if (gana==true)
                     {
                         gana = false;
+                        puntos = puntos + (nuevomov - movimientos);
                         puntos = puntos + (5 * nivel);
                         nivel = nivel + 1;
-                        movimientos = 80 + nivel*10;
+                        nuevomov = nuevomov + 10;
+                        movimientos = nuevomov;
                         
                         // Generar posiciones iniciales nuevas
                         buenapos = false;
@@ -238,7 +241,6 @@ public class E41t3 {
                             {
                                 yj = yj - 1;
                                 movimientos = movimientos - 1;
-                                puntos = puntos + 1;
                             }
                             else yj = 3;                            
                             break;
@@ -250,7 +252,6 @@ public class E41t3 {
                             {
                                 yj = yj + 1;
                                 movimientos = movimientos - 1;
-                                puntos = puntos + 1;
                             }
                             else yj = altop - 2;
                             break;
@@ -262,7 +263,6 @@ public class E41t3 {
                             {
                                 xj = xj - 1;
                                 movimientos = movimientos - 1;
-                                puntos = puntos + 1;
                             }
                             else xj = 0;
                             break;
@@ -274,7 +274,6 @@ public class E41t3 {
                             {
                                 xj = xj + 1;
                                 movimientos = movimientos - 1;
-                                puntos = puntos + 1;
                             }
                             else xj = anchop-1;
                             break;
@@ -295,7 +294,7 @@ public class E41t3 {
                         capat.cls();
                         capat.print(yt, xt, "$");
                         capat.print(altop / 2, (anchop / 2) - (textogana.length() / 2), textogana);
-                        capat.print(altop / 2 + 2, (anchop / 2) - ((puntuacion.length() + Integer.toString(puntos + (5 * nivel)).length()) / 2), puntuacion + "" + (puntos + (5 * nivel)));
+                        capat.print(altop / 2 + 2, (anchop / 2) - ((puntuacion.length() + Integer.toString(puntos + (nuevomov - movimientos) + (5 * nivel)).length()) / 2), puntuacion + "" + (puntos + (nuevomov - movimientos) + (5 * nivel)));
                         
                         // Hacemos una breve pausa y continuamos si se pulsa cualquier tecla
                         try
