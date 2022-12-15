@@ -48,7 +48,7 @@ public class calcular_notas_05 {
             pesorelativo[8] = (float) 5 / 100;
         float notaRA[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};               // Tabla de notas de RA según Unidad correspondiente
         float notaRArel[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};            // Tabla de notas de RA ajustadas por porcentaje de peso relativo
-        float parcialaprobado[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};      // Tabla que contiene notaRA[] * 0,1
+        float parcialaprobado[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};      // Tabla que contiene notaRA[] * 10
         float trim1, trim2, trim3;                                  // Media de cada trimestre
         float mediacurso, sumaRAs = 0;                              // Media de los tres trimestres, sumatorio de notaRArel[]
         boolean aprueba;                                            // Condición de aprobado
