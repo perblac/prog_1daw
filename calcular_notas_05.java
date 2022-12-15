@@ -33,7 +33,6 @@ public class calcular_notas_05 {
         }
 
     public static void main(String args[]) {
-        float ra[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};                   // Tabla de resultados de aprendizaje (RAs)
         float entradanotas;                                         // Variable temporal de entrada de datos
         int i;                                                      // Contador para bucles for
         float unidad[] = {0, 0, 0, 0, 0, 0, 0};                     // Tabla de notas de Unidades del curso
