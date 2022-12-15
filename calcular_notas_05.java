@@ -84,7 +84,7 @@ public class calcular_notas_05 {
         trim3 = media2(unidad[5], unidad[6]);
 
         // Media del curso
-        mediacurso = media3(trim1, trim2, trim3);
+        mediacurso = ((trim1*3) + (trim2*2) + (trim3*2))/7;
 
         // Asignación de notas de RA según Unidad correspondiente
         notaRA[0] = unidad[0];
@@ -103,11 +103,10 @@ public class calcular_notas_05 {
             notaRArel[i] = pesorelativo[i] * notaRA[i];
         }
 
-        // Cálculo de notaRA[] * 10 //v.04: asignar a ra[]
+        // Cálculo de notaRA[] * 10
         for (i = 0; i < 9; i++)
         {
             parcialaprobado[i] = notaRA[i] * 10;
-            ra[i] = notaRA[i];
         }
 
         // Sumatorio
@@ -139,11 +138,11 @@ public class calcular_notas_05 {
         out.println("aprendizaje");
         for (i = 0; i < 9; i++)
         {
-            out.println("RA" + (i + 1) + ": " + frmt.format(ra[i])
-                    + "   \t" + (pesorelativo[i] * 100)
+            out.println("RA" + (i + 1) //+ ": " + frmt.format(ra[i])
+                    + "  \t\t" + (pesorelativo[i] * 100)
                     + "%\t\t" + frmt.format(notaRA[i])
                     + "\t\t" + frmt.format(notaRArel[i])
-                    + "\t\t" + frmt.format(parcialaprobado[i]));
+                    + "\t\t" + frmt.format(parcialaprobado[i]) + " %");
         }
         out.println("\t\t\t\tTOTAL suma RAs:\t" + frmt.format(sumaRAs));
 
@@ -152,9 +151,9 @@ public class calcular_notas_05 {
         aprueba = true;
         for (i = 0; i < 9; i++)
         {
-            if (ra[i] < 5)          // Imprime cada RA que no supere el 50% junto con su valor
+            if (notaRA[i] < 5)          // Imprime cada RA que no supere el 50% junto con su valor
             {
-                out.print("RA" + (i + 1) + "=" + ra[i] + "; ");
+                out.print("RA" + (i + 1) + "=" + notaRA[i] + "; ");
                 aprueba = false;
             }
         }
