@@ -37,6 +37,13 @@ package e41t3;
  */
 import bpc.daw.consola.*;
 import java.util.Random;
+import bpc.daw.reproductor.*;
+import java.awt.Image;
+import java.awt.Rectangle;
+import java.io.File;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class E41t3 {
     
@@ -62,9 +69,50 @@ public class E41t3 {
         c.cls();
     }
     
+    static int imprimeOpciones(CapaTexto c, Teclado t, int fuente)
+    {
+        boolean salir = false;
+        do
+        {
+            char opcion;
+            int anchop = c.getNumeroColumnas();
+            int altop = c.getNumeroFilas();  
+            String titulo = "OPCIONES";
+            String linea1 = "Tamaño de texto: +/-";
+            String linea2 = "";
+            String linea3 = "Volver: v";
+            c.cls();
+            imprimeLinea(c, 1);
+            c.print(1, (anchop/2)-(titulo.length()/2), titulo);
+            c.print(altop/2, (anchop/2)-(linea1.length()/2), linea1);
+            c.print((altop/2)+2, (anchop/2)-(linea2.length()/2), linea2);
+            c.print((altop/2)+4, (anchop/2)-(linea3.length()/2), linea3); 
+                        
+            opcion = t.leerCaracter();
+            switch (opcion)
+            {   
+                case 'v':
+                case 'V':
+                    salir = true;
+                    break;
+                case '+':
+                    fuente = fuente + 5;
+                    c.setTamTexto(fuente);
+                    break;
+                case '-':
+                    fuente = fuente - 5;
+                    if (fuente <= 10) fuente = 10;
+                    c.setTamTexto(fuente);
+                    break;
+            }
+            c.cls();            
+        } while (!salir);
+        return fuente;
+    }
+    
     static void imprimeMenu(CapaTexto c, int puntos, int max)
     {
-        String titulo = "EL JUEGO DEL TESORO", opcion1 = "1.- JUGAR", opcion2 = "2.- INSTRUCCIONES", opcion3 = "3.- SALIR";
+        String titulo = "EL JUEGO DEL TESORO", opcion1 = "1.- JUGAR", opcion2 = "2.- OPCIONES", opcion3 = "3.- INSTRUCCIONES", opcion4 = "4.- SALIR";
         String record = "HiSCORE: ";
         int anchop = c.getNumeroColumnas();
         int altop = c.getNumeroFilas();
@@ -73,6 +121,7 @@ public class E41t3 {
         c.print(altop/2, (anchop/2)-(opcion2.length()/2), opcion1);
         c.print((altop/2)+2, (anchop/2)-(opcion2.length()/2), opcion2);
         c.print((altop/2)+4, (anchop/2)-(opcion2.length()/2), opcion3);
+        c.print((altop/2)+6, (anchop/2)-(opcion2.length()/2), opcion4);
         c.print(c.getNumeroFilas()-1, 1, "Última puntuación: "+ puntos);
         c.print(c.getNumeroFilas()-1, c.getNumeroColumnas()-(record.length()+Integer.toString(max).length()+1), record + "" + max);
     }
@@ -106,10 +155,16 @@ public class E41t3 {
             t.print(1, (t.getNumeroColumnas()/5)*4, c);
     }
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        // Variables para musica
+        ArchivoMP3 cancion1 = new ArchivoMP3("music1.mp3");
+        Reproductor fondomusical = new Reproductor(cancion1, false, false);               
+        
         // Declaracion de variables
         Consola cons = new Consola();
         CapaTexto capat = cons.getCapaTexto();
+        int tempfuente, fuente = 25; // Tamaño de texto inicial
+        capat.setTamTexto(fuente);
         Teclado tecl = cons.getTeclado();
         int anchop = capat.getNumeroColumnas();
         int altop = capat.getNumeroFilas();
@@ -117,7 +172,9 @@ public class E41t3 {
         String pista = null;
         int xj = 4, yj = 4, xt = 3, yt = 3;
         Random generador = new Random();
-        char personaje = '☻', entrada;
+        //        char personaje = '☻', entrada;
+        char personaje = ' ', entrada;
+
         String puntuacion = "PUNTUACIÓN: ", fin = "FIN DE PARTIDA", textogana = "¡TESORO ENCONTRADO!";
         boolean finjuego, gana, salir, menu, buenapos;
         // cheat
@@ -125,11 +182,41 @@ public class E41t3 {
         tecl.activarEco(false);
         tecl.setTipoCursor(Teclado.CURSOR_NULO);        
         
+        // Sprites
+        BufferedImage sprite1 = ImageIO.read(new File("sprite1.png"));
+        BufferedImage sprite2 = ImageIO.read(new File("sprite2.png"));
+        BufferedImage sprite3 = ImageIO.read(new File("sprite3.png"));
+        BufferedImage sprite4 = ImageIO.read(new File("sprite4.png"));
+        CapaSprites capag = cons.getCapaSprites();
+        
+        Image spriteab = sprite1.getScaledInstance(capat.getAnchoTexto()*2, capat.getAltoTexto(), BufferedImage.SCALE_DEFAULT);
+        Image spritear = sprite2.getScaledInstance(capat.getAnchoTexto()*2, capat.getAltoTexto(), BufferedImage.SCALE_DEFAULT);
+        Image spriteiz = sprite3.getScaledInstance(capat.getAnchoTexto()*2, capat.getAltoTexto(), BufferedImage.SCALE_DEFAULT);
+        Image spritede = sprite4.getScaledInstance(capat.getAnchoTexto()*2, capat.getAltoTexto(), BufferedImage.SCALE_DEFAULT);
+        
+        Rectangle rctngl = new Rectangle(capat.getAnchoTexto()*2,capat.getAltoTexto());
+        
+        Sprite perso = capag.crearSprite(spriteab, rctngl, 0, 0);
+        perso.setVisible(false);
+        
         // Empezamos poniendo salir a false
         salir = false;
         // Bucle principal, se sale cuando salir = true
         do
-        {            
+        {   // Paramos la musica
+            fondomusical.stop();
+            
+            // Quita sprites
+            perso.setVisible(false);
+            
+            // Tamaño sprites
+            spriteab = sprite1.getScaledInstance(capat.getAnchoTexto()*2, capat.getAltoTexto(), BufferedImage.SCALE_DEFAULT);
+            spritear = sprite2.getScaledInstance(capat.getAnchoTexto()*2, capat.getAltoTexto(), BufferedImage.SCALE_DEFAULT);
+            spriteiz = sprite3.getScaledInstance(capat.getAnchoTexto()*2, capat.getAltoTexto(), BufferedImage.SCALE_DEFAULT);
+            spritede = sprite4.getScaledInstance(capat.getAnchoTexto()*2, capat.getAltoTexto(), BufferedImage.SCALE_DEFAULT);
+            rctngl = new Rectangle(capat.getAnchoTexto()*2,capat.getAltoTexto());
+            
+            
             // Inicialización de variables cuando no hay partida
             finjuego = false; gana = false;
             ultimapuntuacion = puntos;
@@ -158,10 +245,27 @@ public class E41t3 {
                         menu = true;
                         break;
                     case '2':
-                        imprimeInstrucciones(capat, tecl);
+                        tempfuente = imprimeOpciones(capat, tecl, fuente);
+                        fuente = tempfuente;
+                        
+                        // recalcular escala de sprites
+                        anchop = capat.getNumeroColumnas();
+                        altop = capat.getNumeroFilas();
+                        spriteab = sprite1.getScaledInstance(capat.getAnchoTexto()*2, capat.getAltoTexto(), BufferedImage.SCALE_DEFAULT);
+                        spritear = sprite2.getScaledInstance(capat.getAnchoTexto()*2, capat.getAltoTexto(), BufferedImage.SCALE_DEFAULT);
+                        spriteiz = sprite3.getScaledInstance(capat.getAnchoTexto()*2, capat.getAltoTexto(), BufferedImage.SCALE_DEFAULT);
+                        spritede = sprite4.getScaledInstance(capat.getAnchoTexto()*2, capat.getAltoTexto(), BufferedImage.SCALE_DEFAULT);
+                        rctngl = new Rectangle(capat.getAnchoTexto()*2,capat.getAltoTexto());
+                        perso = capag.crearSprite(spriteab, rctngl, 0, 0);
+                        perso.setVisible(false);
+                        
                         imprimeMenu(capat, ultimapuntuacion, maxpuntos);
                         break;
                     case '3':
+                        imprimeInstrucciones(capat, tecl);
+                        imprimeMenu(capat, ultimapuntuacion, maxpuntos);
+                        break;
+                    case '4':
                         menu = true;
                         salir = true;
                         break;
@@ -170,6 +274,9 @@ public class E41t3 {
                         break;
                 }
             } while(!menu);
+            
+            // Reproducir musica
+            if (!salir) fondomusical.play();
             
             // Si no salimos, jugamos nueva partida
             if (!salir)
@@ -184,6 +291,9 @@ public class E41t3 {
                     yj = altop / 2 + 3;
                     if ((xj != xt) || (yj != yt)) buenapos = true; // Si coinciden ambas coordenadas, repetimos
                 }
+                
+                // Sprite visible
+                perso.setVisible(true);
                 
                 do // Bucle de juego
                 {
@@ -224,7 +334,9 @@ public class E41t3 {
                     imprimeMarcador(capat, nivel, puntos,movimientos, pista);
                     
                     // Imprimimos personaje
-                    capat.print(yj,xj,String.valueOf(personaje));                    
+                    capat.print(yj,xj,String.valueOf(personaje));
+                    perso.setPosicion((int)capat.getAnchoTexto()*xj, (int)capat.getAltoTexto()*yj);
+                    
                     
                     // cheat
                     if (cheat) capat.print(yt,xt,"X");
@@ -242,6 +354,7 @@ public class E41t3 {
                                 movimientos = movimientos - 1;
                             }
                             else yj = 3;                            
+                            perso.setImagen(spritear, rctngl);
                             break;
                             
                         // Abajo
@@ -253,6 +366,7 @@ public class E41t3 {
                                 movimientos = movimientos - 1;
                             }
                             else yj = altop - 2;
+                            perso.setImagen(spriteab, rctngl);
                             break;
                             
                         // Izquieda
@@ -264,6 +378,7 @@ public class E41t3 {
                                 movimientos = movimientos - 1;
                             }
                             else xj = 0;
+                            perso.setImagen(spritede, rctngl);
                             break;
                             
                         // Derecha
@@ -275,6 +390,7 @@ public class E41t3 {
                                 movimientos = movimientos - 1;
                             }
                             else xj = anchop-1;
+                            perso.setImagen(spriteiz, rctngl);
                             break;
                             
                         // Salir
