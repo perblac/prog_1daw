@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author rperblac
+ * @author rperc
  */
 public class DNITest {
     
