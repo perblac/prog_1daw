@@ -29,24 +29,24 @@
     </p>
     <table>
       <tr>
-        <th>Caja</th>
+        <th>MarcadorBaloncesto</th>
       </tr>
       <tr>
-        <td>+ boolean abierto<br />+ String mensaje</td>
+        <td>+ String nombreLocal<br />+ String nombreVisitante<br />+ int puntosLocal<br />+ int puntosVisitante<br />+ LocalDate fecha</td>
       </tr>
       <tr>
-        <td>+ Caja(String m)<br />+ Caja(boolean a, String m)<br />+ Caja()</td>
+        <td>+ MarcadorBaloncesto(String nL, String nV)<br />+ MarcadorBaloncesto(String nL, String nV, LocalDate f)<br />- MarcadorBaloncesto(String nL, int pL, String nVl, int pV, LocalDate fecha)</td>
       </tr>
     </table>
     <ul>
       <li>
-        El primer constructor crea una caja que tiene el mensaje indicado y está cerrada.
+        El primer constructor crea un marcador que recibe los nombres del equipo local y visitante, ambos tienen 0 puntos y se juega en la fecha actual.
       </li>
       <li>
-        El segundo constructor crea una caja que está abierta según lo indique el primer parámetro y tiene el mensaje del segundo parámetro.
+        El segundo constructor crea un marcador que recibe los nombres del equipo local y visitante, ambos tienen 0 puntos y se juega en la fecha recibida como parámetro.
       </li>
       <li>
-        El tercer constructor crea una caja cerrada que guarda el mensaje “Viva el tema 7”.
+        El tercer constructor crea un marcador que recibe los nombres del equipo local y visitante, tienen los puntos que se reciben como parámetros y se juega en la fecha recibida como parámetro.
       </li>
     </ul>
     <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
