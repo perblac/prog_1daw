@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: 60%;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 4: </b></ins>Añade al paquete daw.persona del ejercicio 1 la siguiente clase, que representa una Persona, que tiene un DNI:
+    </p>
+    <table>
+      <tr>
+        <th>Persona</th>
+      </tr>
+      <tr>
+        <td>+ String nombre<br />+ DNI dni<br />+ double sueldo<br />+ LocalDate fechaNacimiento</td>
+      </tr>
+      <tr>
+        <td>+ Persona(String n, DNI d, double s, LocalDate fn)<br />+ Persona(String n, int numDNI, char letraDNI, double s, LocalDate fn)<br />+ Persona(String n, DNI d)<br />+ Persona(String n, int numDNI, char letraDNI)</td>
+      </tr>
+    </table>
+    <ul>
+      <li>
+        El primer constructor crea una persona a partir de su nombre, DNI, sueldo y fecha de nacimiento pasadas como parámetros.
+      </li>
+      <li>
+        El segundo constructor crea una persona a partir de su nombre, número, letra de DNI, sueldo y fecha de nacimiento pasada como parámetro.
+      </li>
+      <li>
+        El tercer constructor crea una persona cuyo nombre y DNI se pasan como parámetro, gana 900 euros y ha nacido hace 20 años.
+      </li>
+      <li>
+        El cuarto constructor crea una persona cuyo nombre, número y letra de DNI se pasan como parámetro, gana 900 euros y ha nacido hace 20 años.
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>
