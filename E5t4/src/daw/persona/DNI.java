@@ -2,6 +2,7 @@
 package daw.persona;
 
 /**
+ * Un DNI compuesto por un número y una letra
  *
  * @author rperblac
  */

@@ -4,6 +4,7 @@ package daw.persona;
 import java.time.LocalDate;
 
 /**
+ * Representa una Persona, que tiene un DNI
  *
  * @author rperblac
  */

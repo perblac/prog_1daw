@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
+ * Una oficina en la que trabajan varias personas
  *
  * @author rperblac
  */
@@ -28,7 +29,10 @@ public class Oficina {
     /**
      * Crea una oficina que se llama como indica el nombre recibido, y un tipo
      * @param nombre nombre de la oficina
-     * @param tipo  0 o mayor de 3: la lista de trabajadores estará vacía.  1: la lista de trabajadores solo tiene este trabajador Antonio Pérez Pérez, 11111111H, 900, 28/2/2000. 2: la lista de trabajadores tendrá al de tipo 1, y también a Luis López López, 22222222J,1000, 10/9/1995. Si el tipo es 3, la lista de trabajadores tendrá a los trabajadores de tipo 2 y a Ana Díaz Díaz. 33333333P, 1200, 21/5/1985
+     * @param tipo 0 o mayor de 3: la lista de trabajadores estará vacía.<br/>
+     * 1: la lista de trabajadores solo tiene este trabajador Antonio Pérez Pérez, 11111111H, 900, 28/2/2000.<br/>
+     * 2: la lista de trabajadores tendrá al de tipo 1, y también a Luis López López, 22222222J,1000, 10/9/1995.<br/>
+     * 3: la lista de trabajadores tendrá a los trabajadores de tipo 2 y a Ana Díaz Díaz. 33333333P, 1200, 21/5/1985
      */
     public Oficina(String nombre, int tipo){
         this.nombre = nombre;
