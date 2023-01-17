@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: 40%;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+      table.c,
+      td.c {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 1px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: auto;
+      }
+
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 5: </b></ins>Programa la siguiente clase, que es una oficina en la que trabajan varias personas:
+    </p>
+    <table>
+      <tr>
+        <th>Oficina</th>
+      </tr>
+      <tr>
+        <td>+ String nombre<br />+ ArrayList&lt;Persona&gt; trabajadores</td>
+      </tr>
+      <tr>
+        <td>+ Oficina(String nombre)<br />+ Oficina(String nombre, int tipo)<br />+ Oficina()</td>
+      </tr>
+    </table>
+    <ul>
+      <li>
+        El primer constructor crea una oficina que se llama como indica el nombre recibido, y la lista de trabajadores está vacía.
+      </li>
+      <li>
+        El segundo constructor crea una oficina que se llama como indica el nombre recibido, y un tipo, que hace lo siguiente:
+        <ul>
+            <li>
+                Si el tipo es 0 o mayor de 3, la lista de trabajadores estará vacía.
+            </li>
+            <li>
+                Si el tipo es 1, la lista de trabajadores solo tiene este trabajador:<br />
+                <table class="c">
+                    <tr>
+                        <td class="c">Antonio Pérez Pérez</td>
+                        <td class="c">11111111H</td>
+                        <td class="c">900</td>
+                        <td class="c">28/2/2000</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                Si el tipo es 2, la lista de trabajadores tendrá al de tipo 1, y también a:<br />
+                <table class="c">
+                    <tr>
+                        <td class="c">Luis López López</td>
+                        <td class="c">22222222J</td>
+                        <td class="c">1000</td>
+                        <td class="c">10/9/1995</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+              Si el tipo es 3, la lista de trabajadores tendrá a los trabajadores de tipo 2 y a:<br />
+              <table class="c">
+                <tr>
+                    <td class="c">Ana Díaz Díaz</td>
+                    <td class="c">33333333P</td>
+                    <td class="c">1200</td>
+                    <td class="c">21/5/1985</td>
+                </tr>
+            </table>
+            </li>
+        </ul>
+      </li>
+      <li>
+        El tercer constructor crea una oficina llamada “Industrias DAW”, que es de tipo 3.
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>
