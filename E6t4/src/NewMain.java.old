@@ -1,0 +1,32 @@
+
+/**
+ *
+ * @author rperblac
+ */
+
+public class NewMain {
+
+    public static void main(String[] args) {
+        Punto p1 = new Punto();
+        Punto p2a = new Punto(100, 200);
+        Punto p2b = new Punto(100, 2000);
+        Punto p3 = new Punto(p2a);
+        double angulo = 30;
+        double distancia = 100;
+        Punto p4 = new Punto(angulo, distancia);
+        System.out.println("\tx\ty\np1:\t" + p1.x + "\t" + p1.y);
+        System.out.println("p2a:\t" + p2a.x + "\t" + p2a.y);
+        System.out.println("p2b:\t" + p2b.x + "\t" + p2b.y);
+        System.out.println("p3:\t" + p3.x + "\t" + p3.y);
+        System.out.println("p4:\t" + p4.x + "\t" + p4.y);
+        /*
+        	x	y
+        p1:	0	0
+        p2a:	100	200
+        p2b:	1536	864
+        p3:	50	100
+        p4:	87	50
+        */
+    }
+
+}
