@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: 60%;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 7:</b></ins> Añade al paquete daw.persona esta clase, que representa una cuenta corriente:
+    </p>
+    <table>
+      <tr>
+        <th>CuentaCorriente</th>
+      </tr>
+      <tr>
+        <td>+ int número<br />+ double saldo</td>
+      </tr>
+      <tr>
+        <td>+ CuentaCorriente()<br />+ CuentaCorriente(int número)<br />+ CuentaCorriente(int número, double saldo)<br />+ void añadirDinero(int cantidad)<br />+ void retirarDinero(int cantidad)</td>
+      </tr>
+    </table>
+    <ul>
+      <li>
+        El primer constructor crea una cuenta con número aleatorio entre 0 y 1000, y saldo 0.
+      </li>
+      <li>
+        El segundo constructor crea una cuenta corriente cuyo número de cuenta se pasa como parámetro y tiene saldo 0 euros.
+      </li>
+      <li>
+        El tercer constructor crea una cuenta corriente cuyo número de cuenta se pasa como parámetro y tiene el saldo indicado como parámetro.
+      </li>
+      <li>
+        Los métodos de añadir y retirar cantidad, añaden o retiran del saldo la cantidad indicada.
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>
