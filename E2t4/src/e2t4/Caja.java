@@ -34,7 +34,7 @@ public class Caja {
         mensaje = m;
     }
     /**
-    * Construye una caja abierta con el mensaje "Viva el tema 7"
+    * Construye una caja cerrada con el mensaje "Viva el tema 7"
     */
     public Caja(){
         this(false,"Viva el tema 7");
