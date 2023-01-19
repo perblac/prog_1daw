@@ -1,0 +1,19 @@
+package e7t4;
+
+import daw.persona.CuentaCorriente;
+
+
+/**
+ *
+ * @author rperblac
+ */
+public class E7t4 {
+
+    public static void main(String[] args) {
+        CuentaCorriente c = new CuentaCorriente(1234,1000);
+        System.out.println(c.saldo);
+        c.retirarDinero(100);
+        System.out.println(c.saldo);
+    }
+
+}
