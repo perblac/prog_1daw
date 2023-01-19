@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: 60%;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 9:</b></ins> Añade a la clase MarcadorBaloncesto los métodos indicados:
+    </p>
+    <table>
+        <tr>
+          <th>MarcadorBaloncesto</th>
+        </tr>
+        <tr>
+          <td>+ String nombreLocal<br />+ String nombreVisitante<br />+ int puntosLocal<br />+ int puntosVisitante<br />+ LocalDate fecha</td>
+        </tr>
+        <tr>
+          <td>+ MarcadorBaloncesto(String nL, String nV)<br />+ MarcadorBaloncesto(String nL, String nV, LocalDate f)<br />- MarcadorBaloncesto(String nL, int pL, String nV, int pV, LocalDate fecha)<br /><b>+ void añadirCanasta(char equipo, int puntos)</b><br /><b>+ void reset()</b></td>
+        </tr>
+      </table>
+    <ul>
+      <li>
+        añadirCanasta: Si recibe una L, añade los puntos indicados al local. Si recibe una V, los añade al visitante. Solo se añadirán los puntos que sean 1,2 o 3.
+      </li>
+      <li>
+        reset: Hace que el marcador se vuelva a poner a 0.
+      </li>      
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>
