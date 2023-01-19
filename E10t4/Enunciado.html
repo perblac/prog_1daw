@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: 60%;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 10 :</b></ins> Modifica la clase Persona para que quede de esta forma:
+    </p>
+    <table>
+        <tr>
+          <th>Persona</th>
+        </tr>
+        <tr>
+          <td>+ String nombre<br />+ DNI dni<br />+ double sueldo<br />+ LocalDate fechaNacimiento<br /><b>+ CuentaCorriente cuenta</b></td>
+        </tr>
+        <tr>
+          <td>+ Persona(String n, DNI d, double s, LocalDate fn)<br />+ Persona(String n, int numDNI, char letraDNI, double s, LocalDate fn)<br />+ Persona(String n, DNI d)<br />+ Persona(String n, int numDNI, char letraDNI)<br /><b>+ void aumentarSueldo(int porcentaje)</b><br /><b>+ void cobrarSueldo()</b></td>
+        </tr>
+      </table>
+    <ul>
+      <li>
+        En todos los constructores deberá crearse una cuenta corriente para el empleado. Dicha cuenta tendrá saldo 0 y el número de cuenta será aleatorio.
+      </li>
+      <li>
+        El método aumentarSueldo aumenta el sueldo del empleado el porcentaje indicado como parámetro. Por ejemplo, si el sueldo es 1000 y se llama al método pasando un 50, el sueldo final del empleado será 1500.
+      </li>
+      <li>
+        El método cobrarSueldo añadirá al empleado su sueldo en su cuenta corriente.
+      </li> 
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>
