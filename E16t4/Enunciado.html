@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: auto;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 16 :</b></ins> Crea la siguiente clase DNIMejorado, que representa un DNI cuyo número de letra se calcula automáticamente según la tabla y el procedimiento del ejercicio 19 del tema 4.
+    </p>
+    <table>
+      <tr>
+        <th>DNIMejorado</th>
+      </tr>
+      <tr>
+        <td>- int número<br />- char letra</td>
+      </tr>
+      <tr>
+        <td>+ DNI(int n)<br />+ int getNumero()<br />+ char getLetra()<br />- char calcularLetra(int n)</td>
+      </tr>
+    </table>
+    <ul>
+      <li>
+        El constructor crea un DNI cuyo número se pasa como parámetro y cuya letra se obtiene llamando al método privado calcularLetra.
+      </li>
+      <li>
+        Los métodos getNúmero y getLetra devuelven el número y la letra del DNI.
+      </li>
+      <li>
+        El método privado calcularLetra recibe un número y nos devuelve la letra que tendría el DNI correspondiente a ese número teniendo en cuenta el procedimiento del ejercicio 51 del tema 1.
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>
