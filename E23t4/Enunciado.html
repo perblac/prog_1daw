@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: auto;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 23 : </b></ins>Modifica la clase Oficina, de esta forma: pon <ins>privados</ins> sus métodos constructores, y haz varios métodos estáticos que devuelvan un objeto Oficina, según su tipo:
+    </p>
+    <table>
+        <tr>
+          <th>Oficina</th>
+        </tr>
+        <tr>
+          <td>- String nombre<br />- ArrayList<Persona> trabajadores</td>
+        </tr>
+        <tr>
+          <td>- Oficina(String nombre)<br />- Oficina(String nombre, int tipo)<br />- Oficina()<br />+ static Oficina getOficinaVacia()<br />+ static Oficina getOficinaPequeña()<br />+ static Oficina getOficinaMediana()<br />+ static Oficina getOficinaGrande()</td>
+        </tr>
+      </table>
+    <ul>
+      <li>
+        getOficinaVacia: Devuelve una oficina de tipo 0
+      </li>
+      <li>
+        getOficinaPequeña: Devuelve una oficina de tipo 1
+      </li>
+      <li>
+        getOficinaMediana: Devuelve una oficina de tipo 2
+      </li>
+      <li>
+        getOficinaGrande: Devuelve una oficina de tipo 3
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>
