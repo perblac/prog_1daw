@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: auto;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 22: </b></ins>Crea la siguiente clase Fracción, que representa una Fracción que tiene un numerador y un denominador. Para que sea más fácil, no entraremos en simplificar la fracción.
+    </p>
+    <table>
+      <tr>
+        <th>Fracción</th>
+      </tr>
+      <tr>
+        <td>- int numerador<br />- int denominador</td>
+      </tr>
+      <tr>
+        <td>+ Fracción(int numerador, int denominador)<br />+ int getNumerador()<br />+ int getDenominador()<br />+ double getValorReal()<br />+ Fracción getInversa()<br />+ static Fraccion sumar(Fraccion a, Fraccion b)<br />+ static Fraccion multiplicar(Fraccion a, Fraccion b)<br />+ static Fraccion dividir(Fraccion a, Fraccion b)</td>
+      </tr>
+    </table>
+    <ul>
+      <li>
+        Los getters y el constructor actúan como se espera de ellos.
+      </li>
+      <li>
+        El método getValorReal divide el numerador entre denominador y nos da un double con el resultado (con decimales) de dicha división
+      </li>
+      <li>
+        El método getInversa devuelve una nueva fracción que se obtiene invirtiendo el numerador y el denominador de la fracción que estamos programando.
+      </li>
+      <li>
+        El método sumar suma dos fracciones, teniendo en cuenta que la suma se calcula así:<br />a/b + c/d = (ad + bc) / bd
+      </li>
+      <li>
+        El método multiplicar realiza la multiplicación de dos fracciones, teniendo en cuenta que la multiplicación se calcula así:<br />a/b * c/d = ac/bd
+      </li>
+      <li>
+        El método dividir realiza la división de dos fracciones, teniendo en cuenta que la división se calcula multiplicando la primera por la inversa de la segunda-
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>
