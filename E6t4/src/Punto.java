@@ -53,10 +53,11 @@ public class Punto {
      */
     public Punto(double angulo, double distancia) {
         // sen(angulo) = lado_contrario / hipotenusa
-        // x: sen(90 - angulo) * distancia
+        // x: cos(angulo) * distancia
         // y: sen(angulo) * distancia
-        double x = Math.sin((Math.PI / 180) * (90 - angulo)) * distancia;
-        double y = Math.sin((Math.PI / 180) * angulo) * distancia;
+        double ang = Math.toRadians(angulo);
+        double x = Math.cos(ang)*distancia;
+        double y = Math.sin(ang)*distancia;
         this.x = (int) Math.round(Math.abs(x));
         this.y = (int) Math.round(Math.abs(y));
     }
