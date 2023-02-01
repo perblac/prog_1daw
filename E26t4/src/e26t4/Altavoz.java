@@ -41,7 +41,13 @@ public class Altavoz {
      * @param v nuevo volumen del altavoz
      */
     public void setVolumen(int v) {
-        this.volumen = v;
+        if (v < 0) {
+            this.volumen = 0;
+        } else {
+            this.volumen = v;
+        }
+        if (v > VOL_MAX)
+            this.volumen = VOL_MAX;
     }
     
     /**
