@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"Loteria","c":"Bola","l":"Bola(int)","u":"%3Cinit%3E(int)"},{"p":"Loteria","c":"Bombo","l":"Bombo(int)","u":"%3Cinit%3E(int)"},{"p":"Loteria","c":"Bola","l":"getNumero()"},{"p":"Loteria","c":"Bombo","l":"getNumeroBolas()"},{"p":"Loteria","c":"Bombo","l":"sacarBola()"}];updateSearchResults();
