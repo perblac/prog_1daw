@@ -64,7 +64,7 @@ public class Altavoz {
      */
     public String toString() {
         String v = "[" + this.volumen + "]";
-        int asteriscos = (this.volumen * 10) / VOL_MAX;
+        int asteriscos = Math.round((float) (this.volumen * 10.0) / VOL_MAX);
         return new StringBuilder(v).append("**********", 0, asteriscos).append("----------", 0, (10-asteriscos)).toString();
     }
 }
