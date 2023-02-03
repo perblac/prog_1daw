@@ -17,11 +17,19 @@ public class Fraccion {
     /**
      * Crea una Fracción que tiene un numerador y un denominador.
      * @param numerador el valor dividendo
-     * @param denominador el valor divisor
+     * @param denominador el valor divisor     
+     * @throws Exception si el denominador es cero
      */
-    public Fraccion(int numerador, int denominador){
-        this.numerador = numerador;
-        this.denominador = denominador;
+    public Fraccion(int numerador, int denominador) throws Exception{
+        if (denominador == 0)
+        {
+            throw new Exception("No se puede definir una fracción con denominador 0");
+        }
+        else
+        {
+            this.numerador = numerador;
+            this.denominador = denominador;            
+        }
     }
     /**
      * Devuelve el numerador de la fracción.
@@ -47,9 +55,18 @@ public class Fraccion {
     /**
      * Devuelve la fracción inversa de la fracción.
      * @return una fracción con numerador el denominador de la fracción de entrada, y denominador el numerador
+     * @throws Exception si se pide la inversa de una fracción con numerador cero
      */
-    public Fraccion getInversa() {
-        return new Fraccion(this.denominador, this.numerador);
+    public Fraccion getInversa() throws Exception{
+        Fraccion a;
+        try
+        {
+            a = new Fraccion(this.denominador, this.numerador);            
+        } catch (Exception e)
+        {
+            throw new Exception(e.getMessage());
+        }
+        return a;
     }
     /**
      * Devuelve la suma de las fracciones dadas, sin simplificar.
@@ -58,7 +75,13 @@ public class Fraccion {
      * @return suma de las fracciones
      */
     public static Fraccion sumar(Fraccion a, Fraccion b) {
-        return new Fraccion(((a.getNumerador()*b.getDenominador())+(a.getDenominador()*b.getNumerador())),(a.getDenominador()*b.getDenominador()));
+        Fraccion s;
+        try
+        {
+            s = new Fraccion(((a.getNumerador()*b.getDenominador())+(a.getDenominador()*b.getNumerador())),(a.getDenominador()*b.getDenominador()));           
+        } catch (Exception e)
+        { s = null; }
+        return s;
     }
     /**
      * Multiplica la primera fracción por la segunda.
@@ -67,15 +90,31 @@ public class Fraccion {
      * @return producto de las fracciones
      */
     public static Fraccion multiplicar(Fraccion a, Fraccion b) {
-        return new Fraccion((a.getNumerador()*b.getNumerador()),(a.getDenominador()*b.getDenominador()));
+        Fraccion m;
+        try
+        {
+            m = new Fraccion((a.getNumerador()*b.getNumerador()),(a.getDenominador()*b.getDenominador()));
+        } catch (Exception e)
+        { m = null; }
+        return m;
     }
     /**
      * Divide la primer fracción por la segunda.
      * @param a fracción dividendo
      * @param b fracción divisor
      * @return la fracción resultante de la división
+     * @throws Exception si se intenta dividir por una fracción con numerador cero
      */
-    public static Fraccion dividir(Fraccion a, Fraccion b) {
-        return Fraccion.multiplicar(a, b.getInversa());
+    public static Fraccion dividir(Fraccion a, Fraccion b) throws Exception {
+        Fraccion d;
+        try
+        {
+            d = Fraccion.multiplicar(a, b.getInversa());
+        } catch (Exception e)
+        {
+            throw new Exception ("División por cero");
+        }
+        
+        return  d;
     }
 }
