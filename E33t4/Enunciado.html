@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: auto;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 33 :</b></ins> Programa la siguiente interfaz, que representa algo que tiene dinero:
+    </p>
+    <table>
+        <tr>
+          <th>
+            &lt;&lt;interface&gt;&gt;
+            <br />
+            Adinerado
+        </th>
+        </tr>
+        <tr>
+          <td><br /></td>
+        </tr>
+        <tr>
+          <td>+ double getDineroTotal()<br />+ boolean añadirDinero(int cantidad)<br />+ boolean retirarDinero(int cantidad)</td>
+        </tr>
+    </table>        
+    <ul>
+      <li>
+        getDineroTotal devuelve la cantidad de dinero que tenga el objeto.
+      </li>
+      <li>
+        añadirDinero recibe una cantidad e incrementa la cantidad de dinero del objeto. Devuelve false si no es posible añadir la cantidad de dinero al objeto.
+      </li>
+      <li>
+        retirarDinero recibe una cantidad y decrementa la cantidad de dinero del objeto. Devuelve false si el objeto no tiene dinero suficiente para retirar dicha cantidad.
+      </li>      
+    </ul>
+    <p>
+        Programa las siguientes clases, y haz que implementen la interfaz Adinerado.
+    </p>
+    <table>
+        <tr>
+            <th>
+                Banco implements Adinerado
+            </th>            
+        </tr>
+        <tr>
+            <td>- double dinero</td>
+        </tr>
+        <tr>
+            <td>+ Banco()</td>
+        </tr>
+    </table>
+    <ul>
+        <li>
+            El constructor crea un Banco cuyo dinero almacenado es 0.
+        </li>
+    </ul>
+    <table>
+        <tr>
+            <th>
+                Monedero implements Adinerado
+            </th>
+        </tr>
+        <tr>
+            <td>
+                - double dinero
+            </td>
+        </tr>
+        <tr>
+            <td>
+                + Monedero()
+            </td>
+        </tr>
+    </table>
+    <ul>
+        <li>
+            El constructor crea un Monedero cuyo dinero almacenado es 0, y solo admite almacenar hasta 1000 €.
+        </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>
