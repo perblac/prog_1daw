@@ -1,1 +1,0 @@
-typeSearchIndex = [{"p":"economia","l":"Adinerado"},{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"economia","l":"Banco"},{"p":"economia","l":"Monedero"}];updateSearchResults();
