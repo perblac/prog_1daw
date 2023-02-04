@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: auto;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 2px auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;        
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 36 :</b></ins> En Java hay una interfaz muy importante llamada <b>Comparable&lt;T&gt;</b>, definida así:
+    </p>
+    <table>
+        <tr>
+          <th>
+            &lt;&lt;interface&gt;&gt;
+            <br />
+            Comparable&lt;T&gt;
+        </th>
+        </tr>
+        <tr>
+          <td><br /></td>
+        </tr>
+        <tr>
+          <td>+ int compareTo(T objeto)</td>
+        </tr>
+    </table>      
+    <ul>
+      <li>
+        compareTo: Es un método que sirve para comparar el objeto que implementa la interfaz con otro que se pasa como parámetro y devuelve “la distancia” (con signo positivo o negativo) a la que se encuentra un objeto de otro. En la documentación de la clase que implementa la interfaz te dirán cómo tienes que programar este método en cada caso.
+      </li>
+    </ul>
+    <p>
+        &emsp;Programa la siguiente clase Persona, de forma que dos personas se puedan comparar de menor a mayor por su altura:
+    </p>
+    <table>
+        <tr>
+            <th>
+                Persona implements Comparable&lt;T&gt;
+            </th>            
+        </tr>
+        <tr>
+            <td>- String nombre<br />- double altura</td>
+        </tr>
+        <tr>
+            <td>+ Persona(String nombre)<br />+ String getNombre()<br />+ double getAltura()</td>
+        </tr>
+    </table>
+    <ul>
+        <li>
+            El constructor crea una persona con un nombre y una altura aleatoria entre 1.50 y 2.10 metros.
+        </li>
+        <li>
+            El método compareTo estará programado de forma que devuelva la diferencia entre la altura de la persona que programamos y la altura de la persona que se pasa como parámetro.
+        </li>
+    </ul>    
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>
