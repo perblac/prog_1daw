@@ -48,7 +48,7 @@ public class Persona implements Comparable<Persona> {
     public int compareTo(Persona o) {
         String nomA = this.getNombre();
         String nomB = o.getNombre();        
-        return nomA.compareTo(nomB);
+        return nomA.compareToIgnoreCase(nomB);
     }
 
 }
