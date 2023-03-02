@@ -20,7 +20,16 @@ public class Rascacielos extends Edificio{
     public Rascacielos(String d, int np, int a) throws IllegalArgumentException {
         super(d, np);
         if (a <= 0) throw new IllegalArgumentException("La altura debe ser positiva");
-        //this.altura = a;
+        this.altura = a;
+    }
+    /**
+     * Construye un edificio de tipo rascacielos con una dirección, un número de plantas y una altura igual a 10 metros más 3 m. por cada planta.
+     * @param d dirección del reascacielos
+     * @param np número de plantas
+     * @throws IllegalArgumentException si la altura o el número de plantas no son positivas o son 0 
+     */    
+    public Rascacielos(String d, int np) {
+        super(d, np);
         this.altura = 10 + (np * 3);
     }
     /**
