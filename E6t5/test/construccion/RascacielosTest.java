@@ -30,6 +30,14 @@ public class RascacielosTest {
             System.out.println("Se lanzó la excepción con éxito: " + iae.getMessage());
         }      
     }
+    
+    @Test
+    public void testRascacielos_String_int() {
+        String dir = "calle a nº 1";
+        int np = 10;
+        Rascacielos r = new Rascacielos(dir, np);
+        assertEquals("construccion.Rascacielos", r.getClass().getName());
+    }
 
     @Test
     public void testGetAltura() {
@@ -37,6 +45,14 @@ public class RascacielosTest {
         int np = 10;
         int a = 100;
         Rascacielos r = new Rascacielos(dir, np, a);
+        assertEquals(a, r.getAltura());
+    }
+    
+    @Test
+    public void testGetAltura2() {
+        String dir = "calle a nº 1";
+        int np = 10;
+        Rascacielos r = new Rascacielos(dir, np);
         assertEquals(10 + (np * 3), r.getAltura());
     }
 
