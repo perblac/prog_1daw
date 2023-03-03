@@ -28,7 +28,11 @@ public class HotelTest {
             fail("No se lanzó la excepción esperada");
         } catch (IllegalArgumentException iae)
         {
-            System.out.println("Excepción lanzada con éxito: " + iae.getMessage());
+            if (iae.getMessage().contains("Capacidad máxima de clientes negativa")) {
+                System.out.println("Excepción lanzada con éxito: " + iae.getMessage());
+            } else {
+                fail("La excepción lanzada no era la esperada (Se lanzó: " + iae.getMessage()+")");
+            }
         }        
     }
 
@@ -43,14 +47,21 @@ public class HotelTest {
         h.añadirCliente(c);
         assertEquals(1, h.getNumeroClientes());
         int m0 = 0;
-        Hotel h0 = new Hotel(dir, np, m0);
         try
         {
+            Hotel h0 = new Hotel(dir, np, m0);
             h0.añadirCliente(c);
             fail("No se lanzó la excepción esperada");
         } catch(IllegalStateException iae)
         {
-            System.out.println("Excepción lanzada con éxito: " + iae.getMessage());
+            if (iae.getMessage().contains("Máximo número de clientes alcanzado")) {
+                System.out.println("Excepción lanzada con éxito: " + iae.getMessage());                
+            } else {
+                fail("La excepción lanzada no era la esperada (Se lanzó: " + iae.getMessage()+")");
+            }
+        } catch(IllegalArgumentException iarge)
+        {
+            fail("La excepción lanzada no era la esperada (Se lanzó: " + iarge.getMessage()+")");
         }
     }
 
