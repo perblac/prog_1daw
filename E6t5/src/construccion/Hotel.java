@@ -49,6 +49,10 @@ public class Hotel extends Edificio{
         if (this.clientes.contains(c)) this.clientes.remove(c);
         else throw new NoSuchElementException("El cliente " + c +" no está en el hotel");
     }
+    /**
+     * Devuelve el número de clientes que hay en el hotel
+     * @return número de clientes
+     */
     public int getNumeroClientes() {
         return this.clientes.size();
     }
