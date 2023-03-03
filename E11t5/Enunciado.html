@@ -1,0 +1,35 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 11 </b></ins>: Consulta el diagrama <b>Equipo de fútbol</b> y programa las clases Empleado, CuerpoTecnico y CabreoException.
+    </p>
+    <img src="img.jpg" width="100%">
+    <ul>
+        <li>
+            Empleado: Es un empleado cualquiera del equipo de fútbol.
+        </li>
+        <ul>
+            <li>
+                nombre: El nombre del empleado.
+            </li>
+            <li>
+                sueldo: Dinero que gana el empleado.
+            </li>
+            <li>
+                dinero: La cantidad de dinero que tiene el empleado en su banco. Inicialmente un empleado no tiene dinero en su banco.
+            </li>
+            <li>
+                cobrar: Método que ingresa al empleado la cantidad de dinero pasada como parámetro. Si dicha cantidad es menor que su sueldo, la ingresa, y a continuación lanza una CabreoException.
+            </li>
+        </ul>
+        <li>
+            CuerpoTécnico: Es un empleado que tiene asignado un puesto en el equipo, por ejemplo, entrenador de porteros, preparador físico, etc.
+        </li>
+        <li>
+            CabreoException: Tipo de excepción que se lanza cuando un empleado cobra menos que su sueldo. El mensaje asociado es siempre el mismo: “Al empleado … no se le han pagado … euros”, donde se muestra el nombre del empleado y la cantidad de su salario que no se le ha pagado.
+        </li>
+    </ul>
+  </body>
+</html>
