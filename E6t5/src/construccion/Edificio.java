@@ -22,7 +22,7 @@ public class Edificio {
      */
     public Edificio(String d, int np) throws IllegalArgumentException{
         this.direccion = d;
-        if (np <= 0) throw new IllegalArgumentException("La altura debe ser positiva");
+        if (np <= 0) throw new IllegalArgumentException("El número de plantas debe ser positivo");
         this.numeroPlantas = np;
     }
     /**
