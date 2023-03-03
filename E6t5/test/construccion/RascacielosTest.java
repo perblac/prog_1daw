@@ -27,7 +27,11 @@ public class RascacielosTest {
             fail("No se lanzó la excepción esperada");
         } catch (IllegalArgumentException iae)
         {
-            System.out.println("Se lanzó la excepción con éxito: " + iae.getMessage());
+            if (iae.getMessage().contains("La altura debe ser positiva")) {
+                System.out.println("Se lanzó la excepción con éxito: " + iae.getMessage());                
+            } else {
+                fail("La excepción lanzada no era la esperada");
+            }
         }      
     }
     
