@@ -1,0 +1,44 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 14</b></ins> : Consulta el diagrama de clases <b>Contraseñas</b> y programa la clase GeneradorContraseñas, que es un objeto que genera contraseñas aleatorias y utiliza para ello la clase StringBuilder, de la librería estándar de Java.
+    </p>
+    <img src="img.jpg" width="100%">
+    <ul>
+        <li>
+            La propiedad “random” es el objeto que la clase usa internamente para generar números aleatorios que den lugar a las letras de las contraseñas.
+        </li>
+        <li>
+            El primer constructor crea un generador de contraseñas, creando su Random interno.
+        </li>
+        <li>
+            El segundo constructor crea un generador de contraseñas con el Random suministrado.
+        </li>
+        <li>
+            El primer generarContraseña genera una contraseña usando el total de caracteres pasado como parámetro. La contraseña se generará así:
+        </li>
+        <ul>
+            <li>
+                Se empieza generando un número aleatorio entre 0, 1 y 2.
+            </li>
+            <li>
+                Si el número sale 0, generará aleatoriamente otro número entre 48 y 57 (ese es el rango de los códigos ASCII de los números).
+            </li>
+            <li>
+                Si el número sale 1, generará aleatoriamente otro número entre 65 y 90 (ese es el rango de los códigos ASCII de las letras mayúsculas).
+            </li>
+            <li>
+                Si el número sale 2, generará aleatoriamente un número entre 97 y 122, (ese es el rango de los códigos ASCII de las letras minúsculas).
+            </li>
+            <li>
+                Se añadirá a la contraseña el carácter cuyo código ascii se ha generado. Aunque no es imprescindible, se aconseja usar la clase StringBuilder para ir construyendo el String de la contraseña.
+            </li>
+        </ul>
+        <li>
+            El segundo generarContraseña genera una contraseña de 8 caracteres de longitud.
+        </li>
+    </ul>
+  </body>
+</html>
