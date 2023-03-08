@@ -1,0 +1,43 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 19 </b></ins>: Consulta el diagrama de clases <b>Paquetería</b> y programa la interfaz EmpresaPaquetería y las clases Paquete y Transportista.
+    </p>
+    <img src="img.jpg" width="1038 px" style="max-width:100%;">
+    <ul>
+        <li>
+            Paquete: Es una clase que representa un paquete que tiene un producto, una dirección de destino y un número que indica su prioridad.
+        </li>
+        <ul>
+            <li>
+                Las constantes de la clase representan los niveles de prioridad permitidos.
+            </li>
+            <li>
+                El constructor crea un paquete con la dirección de destino y nivel de prioridad indicado. Si el nivel de prioridad no es válido, se lanzara una IllegalArgumentException.
+            </li>
+            <li>
+                Dos paquetes se consideran iguales si tienen el mismo producto y la misma dirección de destino. Se recomienda usar el IDE para programar los métodos equals y hashCode.
+            </li>
+            <li>
+                El método compareTo servirá para que los paquetes estén ordenados según su nivel de prioridad. Para ello, deberá devolver la diferencia entre la prioridad del paquete que se está programando y la del paquete que se recibe como parámetro.
+            </li>
+        </ul>
+        <li>
+            Transportista: Clase que representa una persona que puede enviar un paquete a su destino. Posee una lista con todos los paquetes que tiene que enviar y además tiene una propiedad que indica el número de minutos que tarda en enviar un paquete.
+        </li>
+        <ul>
+            <li>
+                Constructor: crea un transportista que tarda en enviar un paquete el número de minutos que se pasa como parámetro, y no tiene ningún paquete asignado.
+            </li>
+            <li>
+                subirCamión: recibe un paquete y lo guarda en su camión.
+            </li>
+            <li>
+                enviar: Simula el envío de paquetes por el transportista. Para ello el método recorre la lista de paquetes y por cada uno, hace una pausa de la cantidad de segundos indicada en la propiedad “tiempoEntrega” y luego muestra por pantalla el mensaje “El paquete (<i>producto</i>) con prioridad (<i>prioridad</i>) ha llegado a: (<i>destino paquete</i>)”. No se tendrá en cuenta la prioridad del paquete.
+            </li>
+        </ul>
+    </ul>
+  </body>
+</html>
