@@ -3,41 +3,27 @@
   </head>
   <body>
     <p>
-      <ins><b>Ejercicio 19 </b></ins>: Consulta el diagrama de clases <b>Paquetería</b> y programa la interfaz EmpresaPaquetería y las clases Paquete y Transportista.
+      <ins><b>Ejercicio 20 </b></ins>: Siguiendo con el ejercicio anterior, programa la clase TransportistaOrdenado.
     </p>
     <img src="img.jpg" width="1038 px" style="max-width:100%;">
     <ul>
         <li>
-            Paquete: Es una clase que representa un paquete que tiene un producto, una dirección de destino y un número que indica su prioridad.
+            EmpresaPaquetería: Es una interfaz que define los requisitos que tiene que tener una clase para ser considerada una empresa de paquetería.
         </li>
         <ul>
             <li>
-                Las constantes de la clase representan los niveles de prioridad permitidos.
+                registrarPedido: Consiste en aceptar un pedido y asignarlo a un repartidor.
             </li>
             <li>
-                El constructor crea un paquete con la dirección de destino y nivel de prioridad indicado. Si el nivel de prioridad no es válido, se lanzara una IllegalArgumentException.
+                getTransportistas: Devuelve una lista con los transportistas que trabajan para la empresa de transportes.
             </li>
             <li>
-                Dos paquetes se consideran iguales si tienen el mismo producto y la misma dirección de destino. Se recomienda usar el IDE para programar los métodos equals y hashCode.
-            </li>
-            <li>
-                El método compareTo servirá para que los paquetes estén ordenados según su nivel de prioridad. Para ello, deberá devolver la diferencia entre la prioridad del paquete que se está programando y la del paquete que se recibe como parámetro.
+                enviarPaquetes: Es un método default que recorre la lista de transportistas y les ordena que envíen los paquetes que tienen asignados.
             </li>
         </ul>
         <li>
-            Transportista: Clase que representa una persona que puede enviar un paquete a su destino. Posee una lista con todos los paquetes que tiene que enviar y además tiene una propiedad que indica el número de minutos que tarda en enviar un paquete.
+            TransportistaOrdenado: Es un tipo de transportista, que cuando recibe la orden de enviar los paquetes, primero ordena la lista de paquetes por prioridad. A continuación, los envía de la forma indicada en el ejercicio anterior.
         </li>
-        <ul>
-            <li>
-                Constructor: crea un transportista que tarda en enviar un paquete el número de minutos que se pasa como parámetro, y no tiene ningún paquete asignado.
-            </li>
-            <li>
-                subirCamión: recibe un paquete y lo guarda en su camión.
-            </li>
-            <li>
-                enviar: Simula el envío de paquetes por el transportista. Para ello el método recorre la lista de paquetes y por cada uno, hace una pausa de la cantidad de segundos indicada en la propiedad “tiempoEntrega” y luego muestra por pantalla el mensaje “El paquete (<i>producto</i>) con prioridad (<i>prioridad</i>) ha llegado a: (<i>destino paquete</i>)”. No se tendrá en cuenta la prioridad del paquete.
-            </li>
-        </ul>
     </ul>
   </body>
 </html>
