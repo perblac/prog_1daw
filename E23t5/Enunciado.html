@@ -1,0 +1,37 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 23 </b></ins>: Consulta el diagrama de clases <b>Animales</b> y programa en un paquete llamado <b>daw.zoo</b> las clases Animal, Tigre y León.
+    </p>
+    <img src="img.jpg" width="1038 px" style="max-width:100%;">
+    <ul>
+        <li>
+            Animal: Es un animal que tiene un nombre, un peso y puede estar o no encerrado en un contenedor de animales.
+        </li>
+        <ul>
+            <li>
+                Haz que el método setEncerrado tenga modificador de acceso por defecto.
+            </li>
+            <li>
+                Sobreescribe los métodos hereados de la clase Object de esta forma:
+            </li>
+            <ul>
+                <li>
+                    toString: Muestra el nombre del animal y su peso.
+                </li>
+                <li>
+                    equals y hashCode: Se considera que un animal coincide con otro si ambos son objetos de la misma clase y además coincide su nombre de animal. Usa el IDE para programar estos métodos.
+                </li>
+            </ul>
+            <li>
+                emitirSonido: Método abstracto que muestra por pantalla un mensaje con el sonido del animal.
+            </li>
+        </ul>
+        <li>
+            León y Tigre: clases que heredan de Animal y sobreescriben “emitirSonido”.
+        </li>
+    </ul>
+  </body>
+</html>
