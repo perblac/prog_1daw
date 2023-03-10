@@ -23,4 +23,19 @@ public class Tigre extends Animal{
         System.out.println("RUAAAH!");
     }
     
+    /**
+     * Compara un tigre con otro objeto, a través del nombre
+     * @param o objeto a comparar con el tigre
+     * @return true si los dos son tigres y tienen el mismo nombre
+     */
+    @Override
+    public boolean equals(Object o) {
+        boolean r = false;
+        if (o instanceof Tigre)
+        {
+            r = super.equals(o);
+        }
+        return r;
+    }
+    
 }
