@@ -23,4 +23,18 @@ public class Leon extends Animal{
         System.out.println("ROAAAR!");
     }
     
+    /**
+     * Compara un leon con otro objeto, a través del nombre
+     * @param o objeto a comparar con el leon
+     * @return true si los dos son leones y tienen el mismo nombre
+     */
+    @Override
+    public boolean equals(Object o) {
+        boolean r = false;
+        if (o instanceof Leon)
+        {
+            r = super.equals(o);
+        }
+        return r;
+    }
 }
