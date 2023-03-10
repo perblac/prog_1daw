@@ -75,7 +75,7 @@ public abstract class Animal {
         if (o instanceof Animal);
         {
             Animal a = (Animal) o;
-            r = this.getNombre().equals(((Animal) o).getNombre());
+            r = this.getNombre().equals(a.getNombre());
         }
         return r;
     }
