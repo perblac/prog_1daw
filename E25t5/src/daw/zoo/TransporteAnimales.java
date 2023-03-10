@@ -44,7 +44,11 @@ public class TransporteAnimales extends Jaula{
             r = (this.comprobarDisponibilidadPlaza())
                 && ((this.getPesoActual() + a.getPeso()) <= this.getPesoMaximo());
         }        
-        if (r) this.animales.add(a);
+        if (r)
+        {
+            a.setEncerrado(true);
+            this.animales.add(a);
+        }
         return r;
     }
 }
