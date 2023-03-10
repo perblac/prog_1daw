@@ -34,11 +34,11 @@ public class JaulaTest {
 
     @Test
     public void testComprobarDisponibilidadPlaza() {
-        assertTrue(j.comprobarDisponibilidadPlaza());
+        assertTrue(j.comprobarDisponibilidadPlaza(l));
         j.añadir(l);
-        assertTrue(j.comprobarDisponibilidadPlaza());
+        assertTrue(j.comprobarDisponibilidadPlaza(t));
         j.añadir(t);
-        assertFalse(j.comprobarDisponibilidadPlaza());        
+        assertFalse(j.comprobarDisponibilidadPlaza(l));        
     }
 
     @Test
