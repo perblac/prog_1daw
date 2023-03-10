@@ -61,9 +61,9 @@ public class ContenedorAnimalesTest {
     @Test
     public void testComprobarDisponibilidad() {
         cai.añadir(l);
-        assertTrue(cai.comprobarDisponibilidadPlaza());
+        assertTrue(cai.comprobarDisponibilidadPlaza(l));
         cai.añadir(t);
-        assertFalse(cai.comprobarDisponibilidadPlaza());
+        assertFalse(cai.comprobarDisponibilidadPlaza(t));
     }
 
     public class ContenedorAnimalesImpl extends ContenedorAnimales {
@@ -72,7 +72,7 @@ public class ContenedorAnimalesTest {
             super();
             this.maxanimales = m;
         }
-        public boolean comprobarDisponibilidadPlaza() {
+        public boolean comprobarDisponibilidadPlaza(Animal a) {
             boolean r = (this.getNumeroAnimales() < this.maxanimales);
             return r;
         }
