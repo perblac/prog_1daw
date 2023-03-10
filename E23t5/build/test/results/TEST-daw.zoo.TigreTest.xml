@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="rpercub089" name="daw.zoo.TigreTest" skipped="0" tests="2" time="0.182" timestamp="2023-03-09T16:32:45">
+<testsuite errors="0" failures="0" hostname="rpercub089" name="daw.zoo.TigreTest" skipped="0" tests="2" time="0.178" timestamp="2023-03-10T16:40:40">
   <properties>
     <property name="libs.spring-framework300.classpath" value="C:\Program Files\NetBeans-15\netbeans\platform\modules\org-apache-commons-logging.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\cglib-2.2.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-aop-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-aspects-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-beans-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-context-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-context-support-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-core-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-expression-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-instrument-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-instrument-tomcat-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-jdbc-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-jms-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-orm-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-oxm-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-struts-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-test-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-tx-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-web-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-webmvc-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-15\netbeans\java\modules\ext\spring-3.0\spring-webmvc-portlet-3.2.18.RELEASE.jar" />
     <property name="javac.test.classpath" value=":build/classes:C:/Users/rperc/Documents/NetBeansProjects/E23t5/lib/junit_4/junit-4.13.2.jar:C:/Users/rperc/Documents/NetBeansProjects/E23t5/lib/hamcrest/hamcrest-core-1.3.jar" />
@@ -17,7 +17,7 @@
     <property name="libs.eclipselink.javadoc" value="C:\Program Files\NetBeans-15\netbeans\java\modules\ext\docs\jakarta.persistence-2.2.3-doc.zip" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-18.0.2.1\bin" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner daw.zoo.TigreTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\rperc\Documents\NetBeansProjects\E23t5\build\test\results\TEST-daw.zoo.TigreTest.xml crashfile=C:\Users\rperc\Documents\NetBeansProjects\E23t5\build\junitvmwatcher10617311488853301987.properties propsfile=C:\Users\rperc\Documents\NetBeansProjects\E23t5\build\junit11492666113674656852.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner daw.zoo.TigreTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\rperc\Documents\NetBeansProjects\E23t5\build\test\results\TEST-daw.zoo.TigreTest.xml crashfile=C:\Users\rperc\Documents\NetBeansProjects\E23t5\build\junitvmwatcher3596178151336039646.properties propsfile=C:\Users\rperc\Documents\NetBeansProjects\E23t5\build\junit17026434924563441151.properties" />
     <property name="jdk.debug" value="release" />
     <property name="libs.spring-framework300.src" value="" />
     <property name="javadoc.use" value="true" />
@@ -38,9 +38,10 @@
     <property name="libs.hamcrest.displayName" value="Hamcrest 1.3" />
     <property name="libs.metro.maven-pom" value="" />
     <property name="libs.JAXB-ENDORSED.javadoc" value="" />
+    <property name="org.openide.awt.SwingBrowserImpl.do-not-block-awt" value="false" />
     <property name="sun.java2d.noddraw" value="true" />
     <property name="sun.zip.disableMemoryMapping" value="true" />
-    <property name="jnidispatch.path" value="C:\Users\rperc\AppData\Local\Temp\jna-108718680\jna9160350403665264517.dll" />
+    <property name="jnidispatch.path" value="C:\Users\rperc\AppData\Local\Temp\jna-108718680\jna15390776881563471247.dll" />
     <property name="libs.primefaces.javadoc" value="" />
     <property name="libs.jsp-compilation.javadoc" value="" />
     <property name="libs.jsf12.src" value="" />
@@ -418,7 +419,7 @@
     <property name="libs.jsp-compiler.classpath" value="C:\Program Files\NetBeans-15\netbeans\enterprise\ant\extra\jspcompile.jar" />
     <property name="libs.javaee-endorsed-api-6.0.classpath" value="C:\Program Files\NetBeans-15\netbeans\enterprise\modules\ext\javaee6-endorsed\javax.annotation.jar;C:\Program Files\NetBeans-15\netbeans\enterprise\modules\ext\javaee6-endorsed\jaxb-api-osgi.jar;C:\Program Files\NetBeans-15\netbeans\enterprise\modules\ext\javaee6-endorsed\webservices-api-osgi.jar" />
   </properties>
-  <testcase classname="daw.zoo.TigreTest" name="testEmitirSonido" time="0.08" />
+  <testcase classname="daw.zoo.TigreTest" name="testEmitirSonido" time="0.086" />
   <testcase classname="daw.zoo.TigreTest" name="testTigre_String_int" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
