@@ -30,7 +30,11 @@ public abstract class ContenedorAnimales {
      */
     public boolean añadir(Animal a) {
         boolean r = this.comprobarDisponibilidad();
-        if (r) this.animales.add(a);
+        if (r) 
+        {
+            a.setEncerrado(true);
+            this.animales.add(a);
+        }
         return r;
     }
     
@@ -41,7 +45,11 @@ public abstract class ContenedorAnimales {
      */
     public boolean retirar(Animal a) {
         boolean r = this.animales.contains(a);
-        if (r) this.animales.remove(a);
+        if (r)
+        {
+            a.setEncerrado(false);
+            this.animales.remove(a);
+        }
         return r;
     }
     
