@@ -29,7 +29,7 @@ public abstract class ContenedorAnimales {
      * @return true si se pudo añadir al animal
      */
     public boolean añadir(Animal a) {
-        boolean r = this.comprobarDisponibilidadPlaza();
+        boolean r = this.comprobarDisponibilidadPlaza(a);
         if (r)
         {
             a.setEncerrado(true);
@@ -76,7 +76,8 @@ public abstract class ContenedorAnimales {
     
     /**
      * Método para saber si el animal recibido como parámetro puede ser añadido o no, al contenedor.
+     * @param a animal que se quiere añadir
      * @return true si el animal se puede añadir al contenedor
      */
-    protected abstract boolean comprobarDisponibilidadPlaza();
+    protected abstract boolean comprobarDisponibilidadPlaza(Animal a);
 }
