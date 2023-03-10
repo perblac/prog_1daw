@@ -43,11 +43,12 @@ public class Jaula extends ContenedorAnimales{
     
     /**
      * Devuelve si el animal recibido como parámetro puede ser añadido o no, a la jaula
+     * @param a animal que se quiere añadir
      * @return true si el animal se puede añadir a la jaula
      */
     @Override
-    public boolean comprobarDisponibilidadPlaza() { 
-        return (this.getNumeroAnimales() < this.getCapacidadMaxima()) && (this.getPesoActual() < this.getPesoMaximo());
+    public boolean comprobarDisponibilidadPlaza(Animal a) { 
+        return (this.getNumeroAnimales() < this.getCapacidadMaxima()) && (this.getPesoActual() + a.getPeso() <= this.getPesoMaximo());
     }
     
     /**
@@ -57,9 +58,12 @@ public class Jaula extends ContenedorAnimales{
      */
     @Override
     public boolean añadir(Animal a) {
-        boolean r = (this.comprobarDisponibilidadPlaza())
-                && ((this.getPesoActual() + a.getPeso()) <= this.getPesoMaximo());
-        if (r) this.animales.add(a);
+        boolean r = this.comprobarDisponibilidadPlaza(a);
+        if (r)
+        {
+            a.setEncerrado(true);
+            this.animales.add(a);
+        }
         return r;
     }
 }
