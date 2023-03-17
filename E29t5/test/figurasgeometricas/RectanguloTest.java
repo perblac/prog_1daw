@@ -2,10 +2,7 @@
 package figurasgeometricas;
 
 import java.awt.Color;
-import java.awt.Graphics;
 import java.awt.Point;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
