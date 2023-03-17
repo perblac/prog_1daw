@@ -50,6 +50,7 @@ public class Transportista {
             System.out.println("El paquete " + p.getProducto() + " con prioridad "
                     + p.getPrioridad() + " ha llegado a: " + p.getDireccionDestino());
         }
+        this.paquetes.clear();
     }
     /**
      * Devuelve la lista de paquetes en el camión del transportista
