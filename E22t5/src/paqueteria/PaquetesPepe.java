@@ -2,6 +2,7 @@
 package paqueteria;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -41,10 +42,13 @@ public class PaquetesPepe implements EmpresaPaqueteria {
         return lista;
     }
     /**
-     * Recorre la lista de transportistas y les ordena que envíen los paquetes que tienen asignados.
+     * Recorre la lista de transportistas y les ordena que envíen los paquetes
+     * que tienen asignados. Ordena los paquetes antes de enviarlos
      */
     @Override
     public void enviarPaquetes() {
+        List lista = Pepe.getPaquetes();
+        Collections.sort(lista);
         Pepe.enviar();
     }
     
