@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"efectos.clases","l":"EfectoCorchetes"},{"p":"efectos.clases","l":"EfectoEspecial"},{"p":"efectos.clases","l":"EfectoGuiones"},{"p":"efectos.clases","l":"EfectoInverso"},{"p":"efectos.clases","l":"EfectoMayusculas"},{"p":"efectos.clases","l":"Simetrico"}];updateSearchResults();
