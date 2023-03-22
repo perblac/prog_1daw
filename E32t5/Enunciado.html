@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <style>
+        table {
+          font-size: 100%;
+          margin: 0 auto;
+          border: 1px solid black;
+          padding: 10px;
+          border-collapse: collapse;
+          background-color: transparent;
+          width: 100%;
+        }
+        th {
+          background-color: lightgray;            
+          border: 1px solid black;
+        }
+        td {            
+          border: 1px solid black;
+        }
+      </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 31 </b></ins>: Crea un paquete llamado <b>efectos.clases</b> y programa en él el diagrama de clases <b>Efectos especiales.</b>
+    </p>
+    <img src="img.jpg" width="1038 px" style="max-width:100%;">
+    <ul>
+        <li>
+            EfectoEspecial: Clase que representa un efecto especial que puede aplicarse sobre una frase. En realidad el efecto lo que hace es transformar la frase en otra.
+        </li>
+        <ul>
+            <li>
+                La propiedad “nombre” es el nombre del efecto especial.
+            </li>
+            <li>
+                El método aplicarEfecto se implementará en las clases hijas y lo que hace es transformar la frase recibida en otra, que será la “aplicación del efecto”.
+            </li>
+            <li>
+                La clase EfectoEspecial tendrá un bloque inicializador estático en el que rellenará la propiedad “EFECTOS” con un objeto de cada uno de los efectos especiales (una vez vayan siendo creados).
+            </li>
+        </ul>
+        <li>
+            Simétrico: Es una interfaz sin métodos que indica que un efecto especial es simétrico, es decir, si se aplica dos veces se vuelve a obtener el mismo texto de partida.
+        </li>
+        <li>
+            Los efectos especiales se programan de la forma que indica la tabla, teniendo además en cuenta que en su constructor, se deberá mostrar por pantalla el mensaje “Creado el efecto especial (<i>nombre</i>)”. Ten además en cuenta que los efectos tienen el modificador de acceso por defecto.
+        </li>        
+    </ul>
+    <table>
+        <tr>
+            <th>
+                Clase
+            </th>
+            <th>
+                Nombre del efecto
+            </th>
+            <th>
+                Lo que hace el efecto
+            </th>
+            <th>
+                Ejemplo
+            </th>
+        </tr>
+        <tr>
+            <td>
+                EfectoMayúsculas
+            </td>
+            <td>
+                Pasar a mayúsculas
+            </td>
+            <td>
+                Pasa a mayúsculas la frase.
+            </td>
+            <td>
+                “a jugar” -> “A JUGAR”
+            </td>
+        </tr>
+        <tr>
+            <td>
+                EfectoInverso
+            </td>
+            <td>
+                Inversión de letras
+            </td>
+            <td>
+                Devuelve la frase al revés.
+            </td>
+            <td>
+                “a jugar” -> “raguj a”
+            </td>
+        </tr>
+        <tr>
+            <td>
+                EfectoGuiones
+            </td>
+            <td>
+                Separador de guiones
+            </td>
+            <td>
+                Cambia los espacios por guiones bajos.
+            </td>
+            <td>
+                “a jugar” -> “a_jugar”
+            </td>
+        </tr>
+        <tr>
+            <td>
+                EfectoCorchetes
+            </td>
+            <td>
+                Envoltura de corchetes
+            </td>
+            <td>
+                Encierra la frase entre [ y ], pero si el texto empieza y termina por ellos, los elimina.
+            </td>
+            <td>
+                “a jugar” -> “[a jugar]”<br />
+                “[a jugar]” -> “a jugar”
+            </td>
+        </tr>
+    </table>
+  </body>
+</html>
