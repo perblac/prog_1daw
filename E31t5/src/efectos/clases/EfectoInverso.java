@@ -10,7 +10,7 @@ public class EfectoInverso extends EfectoEspecial implements Simetrico {
     /**
      * Crea un efecto "Inversión de letras"
      */
-    public EfectoInverso() {
+    EfectoInverso() {
         super("Inversión de letras");
         System.out.println("Creado el efecto " + super.getNombre());
     }

@@ -10,7 +10,7 @@ public class EfectoCorchetes extends EfectoEspecial implements Simetrico {
     /**
      * Crea un efecto "Envoltura de corchetes"
      */
-    public EfectoCorchetes() {
+    EfectoCorchetes() {
         super("Envoltura de corchetes");
         System.out.println("Creado el efecto " + super.getNombre());
     }

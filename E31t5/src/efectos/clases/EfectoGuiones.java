@@ -10,7 +10,7 @@ public class EfectoGuiones extends EfectoEspecial {
     /**
      * Crea un efecto "Separador de guiones"
      */
-    public EfectoGuiones() {
+    EfectoGuiones() {
         super("Separador de guiones");
         System.out.println("Creado el efecto " + super.getNombre());
     }

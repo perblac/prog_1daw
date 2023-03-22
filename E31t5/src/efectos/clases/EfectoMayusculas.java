@@ -10,7 +10,7 @@ public class EfectoMayusculas extends EfectoEspecial {
     /**
      * Crea un efecto "Pasar a mayúsculas"
      */
-    public EfectoMayusculas() {
+    EfectoMayusculas() {
         super("Pasar a mayúsculas");
         System.out.println("Creado el efecto " + super.getNombre());
     }
