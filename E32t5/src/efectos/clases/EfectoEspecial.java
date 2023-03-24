@@ -22,10 +22,6 @@ public abstract class EfectoEspecial {
 
     static {
         EFECTOS = new ArrayList<>();
-        EfectoMayusculas em = new EfectoMayusculas();
-        EfectoInverso ei = new EfectoInverso();
-        EfectoGuiones eg = new EfectoGuiones();
-        EfectoCorchetes ec = new EfectoCorchetes();
     }
 
     /**
