@@ -126,7 +126,7 @@ public class Prueba_JDBC {
         }
         
         // Bucle de lectura de contenidos
-        for (int i = 2; i <= filas; i++)
+        for (int i = 2; i <= filas + 1; i++)
         {
             try {
                 salida.next();
@@ -144,7 +144,7 @@ public class Prueba_JDBC {
         }        
         
         // Representación de la tabla
-        for (int i = 0; i <= filas; i++) {
+        for (int i = 0; i <= filas + 1; i++) {
             for (int j = 0; j <= numCol - 1; j++)
             {
                 String palabra = matriz[i][j];
