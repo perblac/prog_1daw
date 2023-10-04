@@ -1,3 +1,2 @@
-# prog_1daw_t1
-Programas de la clase de programación - curso 1º de DAW 
-Tema 1
+# prog_1daw
+Programas de la clase de programación - curso 1º de DAW
