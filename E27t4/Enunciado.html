@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: auto;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 27 :</b></ins> Programa la siguiente clase, que es un equipo de música que tiene varios altavoces:
+    </p>
+    <table>
+        <tr>
+          <th>EquipoMusica</th>
+        </tr>
+        <tr>
+          <td>- Altavoz[] altavoces</td>
+        </tr>
+        <tr>
+          <td>+ EquipoMusica(int numeroAltavoces)<br />+ Altavoz getAltavoz(int posición)<br />+ void setVolumen(int numeroAltavoz, int volumen)</td>
+        </tr>
+      </table>
+    <ul>
+      <li>
+        La propiedad “altavoces” es un array en el que se guardarán los altavoces del equipo.
+      </li>
+      <li>
+        El constructor inicializa la propiedad “altavoces”, creando un array con la cantidad de altavoces pasada como parámetro, y rellenándola con objetos altavoz.
+      </li>
+      <li>
+        getAltavoz: devuelve el altavoz que se encuentra en la posición indicada, dentro del array de altavoces.
+      </li>
+      <li>
+        setVolumen: cambia el volumen del altavoz cuya posición se pasa como parámetro.
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>

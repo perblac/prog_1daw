@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: auto;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 28 :</b></ins> Consulta la documentación de la clase Optional&lt;T&gt; para programar la siguiente clase CajaMejorada, que usa Optional&lt;String&gt; para guardar su mensaje.
+    </p>
+    <table>
+        <tr>
+          <th>CajaMejorada</th>
+        </tr>
+        <tr>
+          <td>- String mensaje<br />- boolean abierta</td>
+        </tr>
+        <tr>
+          <td>+ CajaMejorada(String m)<br />+ boolean abrir()<br />+ boolean cerrar()<br />+ Optional&lt;String&gt; getMensaje()</td>
+        </tr>
+      </table>
+    <ul>
+      <li>
+        El constructor crea una caja cerrada con un mensaje dentro. Si el mensaje que se pasa como parámetro es null se lanzará una IllegalArgumentExcepcion.
+      </li>
+      <li>
+        Los métodos abrir y cerrar sirven para abrir y cerrar la caja respectivamente.
+      </li>
+      <li>
+        El método getMensaje devuelve esto:
+        <ul>
+          <li>
+            Si la caja está abierta, devuelve un Optional&lt;String&gt; rellenado con el mensaje que hay en la caja.
+          </li>
+          <li>
+            Si la caja está cerrada, devuelve un Optional&lt;String&gt; vacío.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>

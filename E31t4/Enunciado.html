@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: auto;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 31 :</b></ins> Programa la siguiente clase, que es un reloj:
+    </p>
+    <table>
+        <tr>
+          <th>Reloj</th>
+        </tr>
+        <tr>
+          <td>- LocalTime hora</td>
+        </tr>
+        <tr>
+          <td>+ Reloj()<br />+ void añadir(int segundos)<br />+ boolean esNoche()<br />+ void esperar(int segundos)<br />+ String toString()</td>
+        </tr>
+    </table>        
+    <ul>
+      <li>
+        El constructor crea un reloj que guarda la hora del momento actual.
+      </li>
+      <li>
+        El método añadir sirve para añadir la cantidad de segundos indicada a la hora del reloj.
+      </li>
+      <li>
+        El método esNoche devuelve true si la hora está entre las 20:00 y las 8:00.
+      </li>
+      <li>
+        El método esperar hace una pausa de la cantidad de segundos pasada como parámetro y después actualizará la propiedad “hora”.
+      </li>
+      <li>
+        toString: devuelve la hora escrita en el siguiente formato: hora:minutos:segundos.
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: 25%;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 1 : </b></ins>Haz un proyecto, crea en él un paquete llamado <b>daw.persona</b> y programa la siguiente clase DNI, que está formada por un DNI compuesto por un número y una letra.
+    </p>
+    <table>
+      <tr>
+        <th>DNI</th>
+      </tr>
+      <tr>
+        <td>+ int número<br />+ char letra</td>
+      </tr>
+      <tr>
+        <td>+ DNI(int n, char l)<br />+ DNI (String dni)</td>
+      </tr>
+    </table>
+    <ul>
+      <li>
+        El primer constructor crea un DNI a partir del número y letra recibidos como parámetros. No se realizará ninguna comprobación de que el DNI sea correcto.
+      </li>
+      <li>
+        El segundo constructor crea un DNI a partir de un String que guarda el número con la letra. El método deberá separarlos (se supone que el String proporcionado es correcto y que está formado por 8 dígitos y una letra).
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>

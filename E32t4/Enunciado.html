@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: auto;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 32 :</b></ins> Programa la siguiente clase, que es un bolígrafo que puede escribir en la CapaTexto de la Consola DAW:
+    </p>
+    <table>
+        <tr>
+          <th>Bolígrafo</th>
+        </tr>
+        <tr>
+          <td>- static final Color[] COLORES<br />- int color<br />- CapaTexto ct</td>
+        </tr>
+        <tr>
+          <td>+ Bolígrafo(CapaTexto ct)<br />+ void setColor(int n)<br />+ void escribir(String texto)<br />+ void escribirGuay(String texto)</td>
+        </tr>
+    </table>        
+    <ul>
+      <li>
+        La lista COLORES guarda los colores con los que puede escribir el bolígrafo. Estos colores son (en este orden): rojo, verde, azul, blanco, amarillo.
+      </li>
+      <li>
+        El constructor crea un bolígrafo para escribir en la capa de texto que se pasa como parámetro. La propiedad “color” es la posición del color con el que se va a dibujar, dentro la lista COLORES. Inicialmente estará activado el color rojo.
+      </li>
+      <li>
+        El método setColor recibe como parámetro el número de posición del color con el que se va a escribir el texto.
+      </li>
+      <li>
+        El método escribir recibe un String y lo escribe en la capa de texto con el color activo.
+      </li>
+      <li>
+        El método escribirGuay recibe un String y lo escribe en la capa de texto, usando un color diferente de la lista de colores para cada letra. Los colores deberán rotarse.
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>

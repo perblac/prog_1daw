@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"reloj","c":"Reloj","l":"añadir(int)","u":"a%C3%B1adir(int)"},{"p":"reloj","c":"Reloj","l":"esNoche()"},{"p":"reloj","c":"Reloj","l":"esperar(int)"},{"p":"reloj","c":"Reloj","l":"Reloj()","u":"%3Cinit%3E()"},{"p":"reloj","c":"Reloj","l":"toString()"}];updateSearchResults();

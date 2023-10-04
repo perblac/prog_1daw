@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: auto;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 25 : </b></ins>Crea la siguiente clase, que representa una Bola de Dragón. La clase está diseñada para que solo se puedan crear en la memoria RAM un máximo de 7 bolas. Al intentar crear la octava, se lanzará una excepción.
+    </p>
+    <table>
+        <tr>
+          <th>BolaDragón</th>
+        </tr>
+        <tr>
+          <td>- static final int MAXIMO_BOLAS<br />- static int siguienteBola<br />- int número</td>
+        </tr>
+        <tr>
+          <td>- static BolaDragón(int número)<br />+ int getNúmero()<br />+ BolaDragón crearBolaDragón() throws Exception</td>
+        </tr>
+      </table>
+    <ul>
+      <li>
+        La propiedad estática MAXIMO_BOLAS indica la cantidad máxima de bolas que se pueden crear. Se inicializará a 7. La palabra “final” que la acompaña nos indica que esa propiedad se convierte en constante, y por tanto, no se podrá modificar.
+      </li>
+      <li>
+        La propiedad estática siguienteBola es el número de la siguiente bola de dragón que se generará. Por defecto, valdrá 1.
+      </li>
+      <li>
+        La propiedad de instancia número es el número que tiene la bola de dragón.
+      </li>
+      <li>
+        getNúmero: devuelve el número de la bola de dragón.
+      </li>
+      <li>
+        El método estático crearBolaDragón hace lo siguiente:
+        <ul>
+            <li>
+                Si se ha alcanzado la cantidad máxima de bolas creadas, el método lanzará una excepción con el mensaje “Ya se han creado 7 bolas de dragón”.
+            </li>
+            <li>
+                En caso contrario, se creará una nueva bola de dragón con el número que indique la propiedad “siguienteBola” y se devolverá. Además, la propiedad “siguienteBola” se incrementará.
+            </li>
+        </ul>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>

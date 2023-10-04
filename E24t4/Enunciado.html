@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: auto;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 24 : </b></ins>Crea la siguiente clase, que representa la matrícula de un alumno en una asignatura:
+    </p>
+    <table>
+        <tr>
+          <th>Matricula</th>
+        </tr>
+        <tr>
+          <td>- static int siguienteNúmeroMatricula<br />- int númeroMatricula<br />- String nombreAlumno<br />- String nombreAsignatura</td>
+        </tr>
+        <tr>
+          <td>+ Matricula(String nombreAlumno, String nombreAsignatura)<br />+ String getNombreAlumno()<br />+ String getNombreAsignatura()<br />+ int getNúmeroMatrícula()</td>
+        </tr>
+      </table>
+    <ul>
+      <li>
+        La propiedad estática guarda el siguiente número que se usará para matricular a un alumno. El primer número de matrícula disponible será el 1.
+      </li>
+      <li>
+        El constructor crea una matrícula para un alumno en la asignatura indicada. Su número de matrícula será el que indique la propiedad estática “siguienteNúmeroMatrícula”, que deberá incrementarse una vez asignado dicho número a una matrícula concreta.      </li>
+      <li>
+        Los getters devuelven los valores de las propiedades.
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>

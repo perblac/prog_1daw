@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"economia","l":"Adinerado"},{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"economia","l":"Banco"},{"p":"economia","l":"CajeroAutomatico"},{"p":"economia","l":"Monedero"},{"p":"economia","l":"pruebasCajeroAutomatico"}];updateSearchResults();

@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: auto;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 29 :</b></ins> Programa la siguiente clase Bola, que representa una bola que tiene un número:
+    </p>
+    <table>
+        <tr>
+          <th>Bola</th>
+        </tr>
+        <tr>
+          <td>- int número</td>
+        </tr>
+        <tr>
+          <td>+ Bola(int número)<br />+ int getNúmero()</td>
+        </tr>
+    </table>    
+    <p>
+      A continuación, programa la siguiente clase llamada Bombo, que tiene una cola (consultar tema 6 para recordar lo que es una cola y la documentación de la interfaz Queue&lt;T&gt;) con todas las bolas que irán saliendo del bombo:
+    </p>
+    <table>
+        <tr>
+          <th>Bombo</th>
+        </tr>
+        <tr>
+          <td>- Queue&lt;Bola&gt; bolas</td>
+        </tr>
+        <tr>
+          <td>+ Bombo(int totalBolas)<br />+ int getNúmeroBolas()<br />+ Optional&lt;Bola&gt; sacarBola()</td>
+        </tr>
+    </table>
+    <ul>
+      <li>
+        El constructor creará una ArrayDeque&lt;Bola&gt; para inicializar la propiedad “bolas”. A continuación, le añadirá la cantidad de bolas indicada como parámetro. Cada bola tendrá un número aleatorio entre 1 y 100. No importa que se repitan los números de las bolas.
+      </li>
+      <li>
+        El método getNúmeroBolas devolverá la cantidad de bolas que hay en el bombo.
+      </li>
+      <li>
+        El método sacarBola devuelve un Optional&lt;Bola&gt; con la siguiente bola de la cola.        
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: auto;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 30 :</b></ins> Programa la siguiente clase, que es un objeto que sirve para registrar las notas que vas sacando en tus exámenes y poder hacer algunas estadísticas:
+    </p>
+    <table>
+        <tr>
+          <th>Notas</th>
+        </tr>
+        <tr>
+          <td>- List&lt;Double&gt; notas</td>
+        </tr>
+        <tr>
+          <td>+ Notas()<br />+ void añadirNota(double n)<br />+ int getTotalNotas()<br />+ OptionalDouble calcularNotaMedia()<br />+ OptionalDouble calcularNotaMaxima()</td>
+        </tr>
+    </table>        
+    <ul>
+      <li>
+        El constructor inicializa la propiedad “notas” con un ArrayList&lt;Double&gt;.
+      </li>
+      <li>
+        añadirNota: Añade a la lista de notas la nota que se pasa como parámetro.
+      </li>
+      <li>
+        getTotalNotas: Devuelve la cantidad de notas que se pasa como parámetro.
+      </li>
+      <li>
+        calcularNotaMedia: Devuelve un OptionalDouble rellenado con la nota media de todas las notas que hay en la lista, o un OptionalDouble vacío si no hay notas en la lista.
+      </li>
+      <li>
+        calcularNotaMáxima: Devuelve un OptionalDouble rellenado con la nota máxima de todas las notas que hay en la lista, o un OptionalDouble vacío si no hay notas en la lista.
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>

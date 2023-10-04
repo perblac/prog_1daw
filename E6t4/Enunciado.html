@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: 60%;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 6: </b></ins>Programa la siguiente clase, que representa un punto de la pantalla que está en unas coordenadas (x,y) comprendidas entre 0 y el tamaño de la pantalla.
+    </p>
+    <table>
+      <tr>
+        <th>Punto</th>
+      </tr>
+      <tr>
+        <td>+ int x<br />+ int y</td>
+      </tr>
+      <tr>
+        <td>+ Punto()<br />+ Punto(int x, int y)<br />+ Punto(Punto p)<br />+ Punto(double angulo, double distancia)</td>
+      </tr>
+    </table>
+    <ul>
+      <li>
+        El primer constructor crea un punto situado en las coordenadas (0,0)
+      </li>
+      <li>
+        El segundo constructor crea un punto situado en las coordenadas (x,y). Si las coordenadas caen fuera de la pantalla (utiliza la clase Toolkit de la librería Java 2D para obtener el tamaño de la pantalla), el punto se pondrá en la esquina inferior derecha de la pantalla.
+      </li>
+      <li>
+        El tercer constructor crea un punto situado en el punto medio del origen (0,0) y el punto pasado como parámetro. Observa la imagen adjunta para ver lo que se pide.
+      </li>
+      <li>
+        El cuarto constructor crea un punto situado a un ángulo y distancia del origen, según se indica la imagen adjunta. <i>(<u>Sugerencia</u>: usa la definición de seno y coseno para obtener el valor de las coordenadas x e y)</i>
+        <img src="img1.jpg" width="100%">
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>

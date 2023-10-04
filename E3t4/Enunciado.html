@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        font-size: 90%;
+        margin: 0 auto;
+        border: 1px solid rgb(255, 67, 64);
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 153);
+        width: 25%;
+      }
+      table.b,
+      td.b {
+        font-size: 100%;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-collapse: collapse;
+        background-color: transparent;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <ins><b>Ejercicio 3: </b></ins>Programa la siguiente clase, que representa un marcador de baloncesto en el que hay un equipo local un equipo visitante, ambos con una puntuación.
+    </p>
+    <table>
+      <tr>
+        <th>MarcadorBaloncesto</th>
+      </tr>
+      <tr>
+        <td>+ String nombreLocal<br />+ String nombreVisitante<br />+ int puntosLocal<br />+ int puntosVisitante<br />+ LocalDate fecha</td>
+      </tr>
+      <tr>
+        <td>+ MarcadorBaloncesto(String nL, String nV)<br />+ MarcadorBaloncesto(String nL, String nV, LocalDate f)<br />- MarcadorBaloncesto(String nL, int pL, String nVl, int pV, LocalDate fecha)</td>
+      </tr>
+    </table>
+    <ul>
+      <li>
+        El primer constructor crea un marcador que recibe los nombres del equipo local y visitante, ambos tienen 0 puntos y se juega en la fecha actual.
+      </li>
+      <li>
+        El segundo constructor crea un marcador que recibe los nombres del equipo local y visitante, ambos tienen 0 puntos y se juega en la fecha recibida como parámetro.
+      </li>
+      <li>
+        El tercer constructor crea un marcador que recibe los nombres del equipo local y visitante, tienen los puntos que se reciben como parámetros y se juega en la fecha recibida como parámetro.
+      </li>
+    </ul>
+    <table class="b"><td class="b">En los siguientes ejercicios, programa las clases y añade varios test que usen asertos para comprobar que los métodos constructores que has programado funcionan correctamente.</td></table>
+  </body>
+</html>
